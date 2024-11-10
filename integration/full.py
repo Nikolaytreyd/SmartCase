@@ -86,8 +86,44 @@ def full (variables = full_variables):
         end_wf_item (index = 2)
 
 
-    if False:
-        begin_wf_item (index = 3, name = "Разломы", collapsed = True)
+    begin_wf_item (index = 3, name = "Разломы")
+    workflow_folder ()
+    if True:
+        pass
+
+
+
+        begin_wf_item (index = 4)
+        polygon_import_txt_format (use_tags_to_assign=False,
+              tags_to_assign=[],
+              use_folder=False,
+              folder="",
+              splitter=True,
+              files_table=[{"file_name" : "frac_line/f1_bot_1.txt", "prefix" : "f1_bot_1"}, {"file_name" : "frac_line/f1_top_1.txt", "prefix" : "f1_top_1"}, {"file_name" : "frac_line/f2_bot_1.txt", "prefix" : "f2_bot_1"}, {"file_name" : "frac_line/f2_top_1.txt", "prefix" : "f2_top_1"}, {"file_name" : "frac_line/f3_bot_1.txt", "prefix" : "f3_bot_1"}, {"file_name" : "frac_line/f3_top_1.txt", "prefix" : "f3_top_1"}, {"file_name" : "frac_line/f4_bot_1.txt", "prefix" : "f4_bot_1"}, {"file_name" : "frac_line/f4_top_1.txt", "prefix" : "f4_top_1"}, {"file_name" : "frac_line/f5_bot_1.txt", "prefix" : "f5_bot_1"}, {"file_name" : "frac_line/f5_top_1.txt", "prefix" : "f5_top_1"}, {"file_name" : "frac_line/f6_bot_1.txt", "prefix" : "f6_bot_1"}, {"file_name" : "frac_line/f6_top_1.txt", "prefix" : "f6_top_1"}],
+              splitter2=True,
+              splitter3=True,
+              file_datum_info=CrsInfo (crs_type="not_specified",
+              crs_code=None,
+              crs_name="",
+              crs_proj_string=None,
+              datum_name=None,
+              datum_bounds_inited=False,
+              datum_bounds_min_x=0,
+              datum_bounds_max_x=0,
+              datum_bounds_min_y=0,
+              datum_bounds_max_y=0,
+              datum_is_in_proj4=False),
+              is_closed=True,
+              invert_z=False,
+              units_system="si",
+              use_xy_units=True,
+              xy_units="metres",
+              use_z_units=True,
+              z_units="metres")
+        end_wf_item (index = 4)
+
+
+        begin_wf_item (index = 5)
         workflow_folder ()
         if True:
             pass
@@ -95,7 +131,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 4)
+                begin_wf_item (index = 6)
                 polygon_set_z_by_depth (polygons=[{"polygon" : find_object (name="f1_top",
                       type="Curve3d"), "depth" : 1800}, {"polygon" : find_object (name="f1_bot",
                       type="Curve3d"), "depth" : 2800}, {"polygon" : find_object (name="f2_top",
@@ -109,37 +145,15 @@ def full (variables = full_variables):
                       type="Curve3d"), "depth" : 2800}, {"polygon" : find_object (name="f6_top",
                       type="Curve3d"), "depth" : 1800}, {"polygon" : find_object (name="f6_bot",
                       type="Curve3d"), "depth" : 2800}])
-                end_wf_item (index = 4)
-
-
-            if False:
-                begin_wf_item (index = 5)
-                fault_create_by_polygons (fault=find_object (name="Fault1",
-                      type="Fault3d"),
-                      polygons_table=[{"polygon" : find_object (name="f1_top",
-                      type="Curve3d")}, {"polygon" : find_object (name="f1_bot",
-                      type="Curve3d")}],
-                      reorder_sticks=False)
-                end_wf_item (index = 5)
-
-
-            if False:
-                begin_wf_item (index = 6)
-                fault_create_by_polygons (fault=find_object (name="Fault2",
-                      type="Fault3d"),
-                      polygons_table=[{"polygon" : find_object (name="f2_top",
-                      type="Curve3d")}, {"polygon" : find_object (name="f2_bot",
-                      type="Curve3d")}],
-                      reorder_sticks=False)
                 end_wf_item (index = 6)
 
 
             if False:
                 begin_wf_item (index = 7)
-                fault_create_by_polygons (fault=find_object (name="Fault3",
+                fault_create_by_polygons (fault=find_object (name="Fault1",
                       type="Fault3d"),
-                      polygons_table=[{"polygon" : find_object (name="f3_top",
-                      type="Curve3d")}, {"polygon" : find_object (name="f3_bot",
+                      polygons_table=[{"polygon" : find_object (name="f1_top",
+                      type="Curve3d")}, {"polygon" : find_object (name="f1_bot",
                       type="Curve3d")}],
                       reorder_sticks=False)
                 end_wf_item (index = 7)
@@ -147,10 +161,10 @@ def full (variables = full_variables):
 
             if False:
                 begin_wf_item (index = 8)
-                fault_create_by_polygons (fault=find_object (name="Fault4",
+                fault_create_by_polygons (fault=find_object (name="Fault2",
                       type="Fault3d"),
-                      polygons_table=[{"polygon" : find_object (name="f4_top",
-                      type="Curve3d")}, {"polygon" : find_object (name="f4_bot",
+                      polygons_table=[{"polygon" : find_object (name="f2_top",
+                      type="Curve3d")}, {"polygon" : find_object (name="f2_bot",
                       type="Curve3d")}],
                       reorder_sticks=False)
                 end_wf_item (index = 8)
@@ -158,10 +172,10 @@ def full (variables = full_variables):
 
             if False:
                 begin_wf_item (index = 9)
-                fault_create_by_polygons (fault=find_object (name="Fault5",
+                fault_create_by_polygons (fault=find_object (name="Fault3",
                       type="Fault3d"),
-                      polygons_table=[{"polygon" : find_object (name="f5_top",
-                      type="Curve3d")}, {"polygon" : find_object (name="f5_bot",
+                      polygons_table=[{"polygon" : find_object (name="f3_top",
+                      type="Curve3d")}, {"polygon" : find_object (name="f3_bot",
                       type="Curve3d")}],
                       reorder_sticks=False)
                 end_wf_item (index = 9)
@@ -169,10 +183,10 @@ def full (variables = full_variables):
 
             if False:
                 begin_wf_item (index = 10)
-                fault_create_by_polygons (fault=find_object (name="Fault6",
+                fault_create_by_polygons (fault=find_object (name="Fault4",
                       type="Fault3d"),
-                      polygons_table=[{"polygon" : find_object (name="f6_top",
-                      type="Curve3d")}, {"polygon" : find_object (name="f6_bot",
+                      polygons_table=[{"polygon" : find_object (name="f4_top",
+                      type="Curve3d")}, {"polygon" : find_object (name="f4_bot",
                       type="Curve3d")}],
                       reorder_sticks=False)
                 end_wf_item (index = 10)
@@ -180,33 +194,31 @@ def full (variables = full_variables):
 
             if False:
                 begin_wf_item (index = 11)
-                fault_smooth (source_surface=find_object (name="Fault1",
+                fault_create_by_polygons (fault=find_object (name="Fault5",
                       type="Fault3d"),
-                      smoothed_surface=find_object (name="Fault1",
-                      type="Fault3d"),
-                      smoothing_method="splines",
-                      subdivision=8,
-                      moving_average_radius=0.05)
+                      polygons_table=[{"polygon" : find_object (name="f5_top",
+                      type="Curve3d")}, {"polygon" : find_object (name="f5_bot",
+                      type="Curve3d")}],
+                      reorder_sticks=False)
                 end_wf_item (index = 11)
 
 
             if False:
                 begin_wf_item (index = 12)
-                fault_smooth (source_surface=find_object (name="Fault2",
+                fault_create_by_polygons (fault=find_object (name="Fault6",
                       type="Fault3d"),
-                      smoothed_surface=find_object (name="Fault2",
-                      type="Fault3d"),
-                      smoothing_method="splines",
-                      subdivision=8,
-                      moving_average_radius=0.05)
+                      polygons_table=[{"polygon" : find_object (name="f6_top",
+                      type="Curve3d")}, {"polygon" : find_object (name="f6_bot",
+                      type="Curve3d")}],
+                      reorder_sticks=False)
                 end_wf_item (index = 12)
 
 
             if False:
                 begin_wf_item (index = 13)
-                fault_smooth (source_surface=find_object (name="Fault3",
+                fault_smooth (source_surface=find_object (name="Fault1",
                       type="Fault3d"),
-                      smoothed_surface=find_object (name="Fault3",
+                      smoothed_surface=find_object (name="Fault1",
                       type="Fault3d"),
                       smoothing_method="splines",
                       subdivision=8,
@@ -216,9 +228,9 @@ def full (variables = full_variables):
 
             if False:
                 begin_wf_item (index = 14)
-                fault_smooth (source_surface=find_object (name="Fault4",
+                fault_smooth (source_surface=find_object (name="Fault2",
                       type="Fault3d"),
-                      smoothed_surface=find_object (name="Fault4",
+                      smoothed_surface=find_object (name="Fault2",
                       type="Fault3d"),
                       smoothing_method="splines",
                       subdivision=8,
@@ -228,9 +240,9 @@ def full (variables = full_variables):
 
             if False:
                 begin_wf_item (index = 15)
-                fault_smooth (source_surface=find_object (name="Fault5",
+                fault_smooth (source_surface=find_object (name="Fault3",
                       type="Fault3d"),
-                      smoothed_surface=find_object (name="Fault5",
+                      smoothed_surface=find_object (name="Fault3",
                       type="Fault3d"),
                       smoothing_method="splines",
                       subdivision=8,
@@ -240,9 +252,9 @@ def full (variables = full_variables):
 
             if False:
                 begin_wf_item (index = 16)
-                fault_smooth (source_surface=find_object (name="Fault6",
+                fault_smooth (source_surface=find_object (name="Fault4",
                       type="Fault3d"),
-                      smoothed_surface=find_object (name="Fault6",
+                      smoothed_surface=find_object (name="Fault4",
                       type="Fault3d"),
                       smoothing_method="splines",
                       subdivision=8,
@@ -250,12 +262,40 @@ def full (variables = full_variables):
                 end_wf_item (index = 16)
 
 
+            if False:
+                begin_wf_item (index = 17)
+                fault_smooth (source_surface=find_object (name="Fault5",
+                      type="Fault3d"),
+                      smoothed_surface=find_object (name="Fault5",
+                      type="Fault3d"),
+                      smoothing_method="splines",
+                      subdivision=8,
+                      moving_average_radius=0.05)
+                end_wf_item (index = 17)
 
-        end_wf_item (index = 3)
+
+            if False:
+                begin_wf_item (index = 18)
+                fault_smooth (source_surface=find_object (name="Fault6",
+                      type="Fault3d"),
+                      smoothed_surface=find_object (name="Fault6",
+                      type="Fault3d"),
+                      smoothing_method="splines",
+                      subdivision=8,
+                      moving_average_radius=0.05)
+                end_wf_item (index = 18)
+
+
+
+        end_wf_item (index = 5)
+
+
+
+    end_wf_item (index = 3)
 
 
     if False:
-        begin_wf_item (index = 18, name = "Сетка", collapsed = True)
+        begin_wf_item (index = 21, name = "Сетка")
         workflow_folder ()
         if True:
             pass
@@ -263,7 +303,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 19)
+                begin_wf_item (index = 22)
                 horizon_calculator (result_horizon=find_object (name="bot",
                       type="Horizon"),
                       use_polygon=False,
@@ -285,11 +325,11 @@ def full (variables = full_variables):
                       formula=resolve_variables_in_string (string_with_variables="top + @H@",
                       variables=variables),
                       variables=variables)
-                end_wf_item (index = 19)
+                end_wf_item (index = 22)
 
 
             if False:
-                begin_wf_item (index = 20)
+                begin_wf_item (index = 23)
                 grid_3d_create_by_horizons_with_faults (grid=find_object (name="test_grid",
                       type="Grid3d"),
                       use_one_layering_column=True,
@@ -373,11 +413,11 @@ def full (variables = full_variables):
                       type="Grid3dProperty"),
                       use_grid_trend=False,
                       smooth_radius=0)
-                end_wf_item (index = 20)
+                end_wf_item (index = 23)
 
 
             if False:
-                begin_wf_item (index = 21)
+                begin_wf_item (index = 24)
                 grid_3d_move (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       angle=30,
@@ -388,11 +428,11 @@ def full (variables = full_variables):
                       shift_z=0,
                       use_invert_i=False,
                       use_invert_j=False)
-                end_wf_item (index = 21)
+                end_wf_item (index = 24)
 
 
             if False:
-                begin_wf_item (index = 22)
+                begin_wf_item (index = 25)
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="X_",
@@ -404,11 +444,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="X",
                       variables=variables)
-                end_wf_item (index = 22)
+                end_wf_item (index = 25)
 
 
             if False:
-                begin_wf_item (index = 23)
+                begin_wf_item (index = 26)
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Y_",
@@ -420,11 +460,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="Y",
                       variables=variables)
-                end_wf_item (index = 23)
+                end_wf_item (index = 26)
 
 
             if False:
-                begin_wf_item (index = 24)
+                begin_wf_item (index = 27)
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Z_",
@@ -436,11 +476,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="Z",
                       variables=variables)
-                end_wf_item (index = 24)
+                end_wf_item (index = 27)
 
 
             if False:
-                begin_wf_item (index = 25, is_custom_code = True)
+                begin_wf_item (index = 28, is_custom_code = True)
                 g = get_grid_by_name(name='test_grid')
                 property_x_ = g.get_property_by_name(name='X_')
                 property_y_ = g.get_property_by_name(name='Y_')
@@ -470,15 +510,15 @@ def full (variables = full_variables):
                 	f.write(f"{x.shape[0]} {x.shape[1]} {x.shape[2]}\n")
                 	for row in coord:
                 		f.write(' '.join(map(str, row)) + '\n')
-                end_wf_item (index = 25)
+                end_wf_item (index = 28)
 
 
 
-        end_wf_item (index = 18)
+        end_wf_item (index = 21)
 
 
     if False:
-        begin_wf_item (index = 27)
+        begin_wf_item (index = 30)
         map_2d_import_user_image (file_name="map/ЯНАО.png",
               user_image_2d_data=find_object (name="map",
               type="User2DImages"),
@@ -493,11 +533,11 @@ def full (variables = full_variables):
               origin_y=0,
               side_width=1000,
               side_height=1000)
-        end_wf_item (index = 27)
+        end_wf_item (index = 30)
 
 
     if False:
-        begin_wf_item (index = 28, name = "Базовое свойство")
+        begin_wf_item (index = 31, name = "Базовое свойство")
         workflow_folder ()
         if True:
             pass
@@ -505,7 +545,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 29, name = "sceleton")
+                begin_wf_item (index = 32, name = "sceleton")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="sceleton",
@@ -517,11 +557,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="0",
                       variables=variables)
-                end_wf_item (index = 29)
+                end_wf_item (index = 32)
 
 
             if False:
-                begin_wf_item (index = 30, is_custom_code = True, name = "Filling sceleton")
+                begin_wf_item (index = 33, is_custom_code = True, name = "Filling sceleton")
                 def generate_gaussian_peaks_V_1d(nz, num_peaks=8, zero=10):
                 	''' Определение вертикального тренда скелетона с использованием линейной интерполяции '''
                 	z_values = np.arange(nz)
@@ -603,15 +643,15 @@ def full (variables = full_variables):
 
 
 
-                end_wf_item (index = 30)
+                end_wf_item (index = 33)
 
 
 
-        end_wf_item (index = 28)
+        end_wf_item (index = 31)
 
 
     if False:
-        begin_wf_item (index = 32, name = "Пористость", collapsed = True)
+        begin_wf_item (index = 35, name = "Пористость", collapsed = True)
         workflow_folder ()
         if True:
             pass
@@ -619,7 +659,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 33, name = "PORO")
+                begin_wf_item (index = 36, name = "PORO")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="PORO",
@@ -631,11 +671,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="0",
                       variables=variables)
-                end_wf_item (index = 33)
+                end_wf_item (index = 36)
 
 
             if False:
-                begin_wf_item (index = 34, is_custom_code = True, name = "Filling PORO")
+                begin_wf_item (index = 37, is_custom_code = True, name = "Filling PORO")
                 def polynomial_approximation(x, y, degree=2):
                 	''' Полиномиальная аппроксимация '''
                 	coefficients = np.polyfit(x, y, degree)
@@ -664,15 +704,15 @@ def full (variables = full_variables):
 
                 property_props = g.get_property_by_name(name='PORO')
                 property_props.set_np_array(values=props)
-                end_wf_item (index = 34)
+                end_wf_item (index = 37)
 
 
 
-        end_wf_item (index = 32)
+        end_wf_item (index = 35)
 
 
     if False:
-        begin_wf_item (index = 36, name = "Активные ячейки", collapsed = True)
+        begin_wf_item (index = 39, name = "Активные ячейки", collapsed = True)
         workflow_folder ()
         if True:
             pass
@@ -680,7 +720,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 37, name = "ACTNUM")
+                begin_wf_item (index = 40, name = "ACTNUM")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="ACTNUM",
@@ -692,11 +732,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="0",
                       variables=variables)
-                end_wf_item (index = 37)
+                end_wf_item (index = 40)
 
 
             if False:
-                begin_wf_item (index = 38, is_custom_code = True, name = "Filling Actnum")
+                begin_wf_item (index = 41, is_custom_code = True, name = "Filling Actnum")
                 g = get_grid_by_name(name='test_grid')
                 property_trend = g.get_property_by_name(name='ACTNUM')
                 property_props = g.get_property_by_name(name='PORO')
@@ -709,15 +749,15 @@ def full (variables = full_variables):
                 	actnum[:, :, k] = median_filter(active[:, :, k], size=15)
                 property_trend.set_np_array(values=actnum)
 
-                end_wf_item (index = 38)
+                end_wf_item (index = 41)
 
 
 
-        end_wf_item (index = 36)
+        end_wf_item (index = 39)
 
 
     if False:
-        begin_wf_item (index = 40, name = "Проницаемость", collapsed = True)
+        begin_wf_item (index = 43, name = "Проницаемость", collapsed = True)
         workflow_folder ()
         if True:
             pass
@@ -725,7 +765,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 41, name = "PERM")
+                begin_wf_item (index = 44, name = "PERM")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="PERMX",
@@ -737,11 +777,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="0",
                       variables=variables)
-                end_wf_item (index = 41)
+                end_wf_item (index = 44)
 
 
             if False:
-                begin_wf_item (index = 42, is_custom_code = True, name = "Filling PERM")
+                begin_wf_item (index = 45, is_custom_code = True, name = "Filling PERM")
                 g = get_grid_by_name(name='test_grid')
                 property_trend = g.get_property_by_name(name='PORO')
                 trend = property_trend.get_np_array()
@@ -759,11 +799,11 @@ def full (variables = full_variables):
 
                 property_props = g.get_property_by_name(name='PERMX')
                 property_props.set_np_array(values=props)
-                end_wf_item (index = 42)
+                end_wf_item (index = 45)
 
 
             if False:
-                begin_wf_item (index = 43, name = "PERM")
+                begin_wf_item (index = 46, name = "PERM")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="PERMY",
@@ -775,15 +815,15 @@ def full (variables = full_variables):
                       value=0),
                       formula="PERMX",
                       variables=variables)
-                end_wf_item (index = 43)
+                end_wf_item (index = 46)
 
 
 
-        end_wf_item (index = 40)
+        end_wf_item (index = 43)
 
 
     if False:
-        begin_wf_item (index = 45, name = "Песчанистость", collapsed = True)
+        begin_wf_item (index = 48, name = "Песчанистость", collapsed = True)
         workflow_folder ()
         if True:
             pass
@@ -791,7 +831,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 46, name = "NTG")
+                begin_wf_item (index = 49, name = "NTG")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="NTG",
@@ -803,11 +843,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="0",
                       variables=variables)
-                end_wf_item (index = 46)
+                end_wf_item (index = 49)
 
 
             if False:
-                begin_wf_item (index = 47, is_custom_code = True, name = "Filling NTG")
+                begin_wf_item (index = 50, is_custom_code = True, name = "Filling NTG")
                 g = get_grid_by_name(name='test_grid')
                 property_trend = g.get_property_by_name(name='PERMX')
                 trend = property_trend.get_np_array()
@@ -823,15 +863,15 @@ def full (variables = full_variables):
 
                 property_props = g.get_property_by_name(name='NTG')
                 property_props.set_np_array(values=props)
-                end_wf_item (index = 47)
+                end_wf_item (index = 50)
 
 
 
-        end_wf_item (index = 45)
+        end_wf_item (index = 48)
 
 
     if False:
-        begin_wf_item (index = 49, name = "Анизотропия по вертикали", collapsed = True)
+        begin_wf_item (index = 52, name = "Анизотропия по вертикали", collapsed = True)
         workflow_folder ()
         if True:
             pass
@@ -839,7 +879,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 50, name = "Kaniz")
+                begin_wf_item (index = 53, name = "Kaniz")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Kaniz",
@@ -851,11 +891,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="0",
                       variables=variables)
-                end_wf_item (index = 50)
+                end_wf_item (index = 53)
 
 
             if False:
-                begin_wf_item (index = 51, is_custom_code = True, name = "Filling Kaniz")
+                begin_wf_item (index = 54, is_custom_code = True, name = "Filling Kaniz")
                 g = get_grid_by_name(name='test_grid')
                 property_trend = g.get_property_by_name(name='NTG')
                 trend = property_trend.get_np_array()
@@ -872,11 +912,11 @@ def full (variables = full_variables):
 
                 property_props = g.get_property_by_name(name='Kaniz')
                 property_props.set_np_array(values=props)
-                end_wf_item (index = 51)
+                end_wf_item (index = 54)
 
 
             if False:
-                begin_wf_item (index = 52, name = "PERMZ")
+                begin_wf_item (index = 55, name = "PERMZ")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="PERMZ",
@@ -888,15 +928,15 @@ def full (variables = full_variables):
                       value=0),
                       formula="PERMX * Kaniz",
                       variables=variables)
-                end_wf_item (index = 52)
+                end_wf_item (index = 55)
 
 
 
-        end_wf_item (index = 49)
+        end_wf_item (index = 52)
 
 
     if False:
-        begin_wf_item (index = 54, name = "Остаточная водонасыщенность", collapsed = True)
+        begin_wf_item (index = 57, name = "Остаточная водонасыщенность", collapsed = True)
         workflow_folder ()
         if True:
             pass
@@ -904,7 +944,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 55, name = "SWL")
+                begin_wf_item (index = 58, name = "SWL")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="SWL",
@@ -916,11 +956,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="0",
                       variables=variables)
-                end_wf_item (index = 55)
+                end_wf_item (index = 58)
 
 
             if False:
-                begin_wf_item (index = 56, is_custom_code = True, name = "Filling SWL")
+                begin_wf_item (index = 59, is_custom_code = True, name = "Filling SWL")
                 g = get_grid_by_name(name='test_grid')
                 property_trend = g.get_property_by_name(name='PERMX')
                 trend = property_trend.get_np_array()
@@ -937,15 +977,15 @@ def full (variables = full_variables):
 
                 property_props = g.get_property_by_name(name='SWL')
                 property_props.set_np_array(values=props)
-                end_wf_item (index = 56)
+                end_wf_item (index = 59)
 
 
 
-        end_wf_item (index = 54)
+        end_wf_item (index = 57)
 
 
     if False:
-        begin_wf_item (index = 58, name = "PVT", collapsed = True)
+        begin_wf_item (index = 61, name = "PVT", collapsed = True)
         workflow_folder ()
         if True:
             pass
@@ -953,7 +993,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 59, is_custom_code = True, name = "save_variables")
+                begin_wf_item (index = 62, is_custom_code = True, name = "save_variables")
                 def name_variable(name: str, value: float, path: str = r'D:\14. Кейсы\005. IRM\models\Variables'):
                 	with open(f"{path}\{name}.txt", 'w') as file:
                 		file.write(f"{value}\n")
@@ -963,11 +1003,11 @@ def full (variables = full_variables):
                 name_variable('DENSITY_OIL', DENSITY_OIL)
                 name_variable('DENSITY_WATER', DENSITY_WATER)
                 name_variable('DENSITY_GAS', DENSITY_GAS)
-                end_wf_item (index = 59)
+                end_wf_item (index = 62)
 
 
             if False:
-                begin_wf_item (index = 60, collapsed = True)
+                begin_wf_item (index = 63, collapsed = True)
                 run_project_workflow (project_type = "pvt_project",
                       project_name = "PVT Data",
                       workflow = "PVT",
@@ -975,15 +1015,15 @@ def full (variables = full_variables):
                       variables_object = {
 
                 })
-                end_wf_item (index = 60)
+                end_wf_item (index = 63)
 
 
 
-        end_wf_item (index = 58)
+        end_wf_item (index = 61)
 
 
     if False:
-        begin_wf_item (index = 62, name = "Насыщенности", collapsed = True)
+        begin_wf_item (index = 65, name = "Насыщенности", collapsed = True)
         workflow_folder ()
         if True:
             pass
@@ -991,7 +1031,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 63, name = "Характер насыщения")
+                begin_wf_item (index = 66, name = "Характер насыщения")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="GasOilWater_zone",
@@ -1003,11 +1043,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="0",
                       variables=variables)
-                end_wf_item (index = 63)
+                end_wf_item (index = 66)
 
 
             if False:
-                begin_wf_item (index = 64, name = "Глубина")
+                begin_wf_item (index = 67, name = "Глубина")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Depth",
@@ -1019,11 +1059,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="Z",
                       variables=variables)
-                end_wf_item (index = 64)
+                end_wf_item (index = 67)
 
 
             if False:
-                begin_wf_item (index = 65, is_custom_code = True, name = "Определение плотности газа нефти в пластовых условиях")
+                begin_wf_item (index = 68, is_custom_code = True, name = "Определение плотности газа нефти в пластовых условиях")
                 # Плотность газа в пластовых условиях
                 def read_pvdg_data(file_path):
                 	pressure = []
@@ -1097,11 +1137,11 @@ def full (variables = full_variables):
                 name_variable('density_gas_pl', density_gas_pl)
                 name_variable('density_oil_pl', density_oil_pl)
                 '''
-                end_wf_item (index = 65)
+                end_wf_item (index = 68)
 
 
             if False:
-                begin_wf_item (index = 66, is_custom_code = True, name = "Filling Zone")
+                begin_wf_item (index = 69, is_custom_code = True, name = "Filling Zone")
                 g = get_grid_by_name(name='test_grid')
                 property_trend = g.get_property_by_name(name='Segments')
                 property_props = g.get_property_by_name(name='GasOilWater_zone')
@@ -1146,11 +1186,11 @@ def full (variables = full_variables):
 
 
 
-                end_wf_item (index = 66)
+                end_wf_item (index = 69)
 
 
             if False:
-                begin_wf_item (index = 67, name = "Pc вода-нефть")
+                begin_wf_item (index = 70, name = "Pc вода-нефть")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="pc_wo",
@@ -1162,11 +1202,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="0\n",
                       variables=variables)
-                end_wf_item (index = 67)
+                end_wf_item (index = 70)
 
 
             if False:
-                begin_wf_item (index = 68, name = "Pc вода-газ")
+                begin_wf_item (index = 71, name = "Pc вода-газ")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="pc_wg",
@@ -1178,11 +1218,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="0",
                       variables=variables)
-                end_wf_item (index = 68)
+                end_wf_item (index = 71)
 
 
             if False:
-                begin_wf_item (index = 69, is_custom_code = True, name = "Filling Pc")
+                begin_wf_item (index = 72, is_custom_code = True, name = "Filling Pc")
                 property_pc_wo = g.get_property_by_name(name='pc_wo')
                 property_pc_wg = g.get_property_by_name(name='pc_wg')
                 property_zone = g.get_property_by_name(name='GasOilWater_zone')
@@ -1207,11 +1247,11 @@ def full (variables = full_variables):
                 	
                 property_pc_wo.set_np_array(values=pc_wo)
                 property_pc_wg.set_np_array(values=pc_wg)
-                end_wf_item (index = 69)
+                end_wf_item (index = 72)
 
 
             if False:
-                begin_wf_item (index = 70, name = "J-функция вода-нефть")
+                begin_wf_item (index = 73, name = "J-функция вода-нефть")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Jf_wo",
@@ -1223,11 +1263,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="(pc_wo / 73 ) *sqrt (PERMX/PORO)*3.1415",
                       variables=variables)
-                end_wf_item (index = 70)
+                end_wf_item (index = 73)
 
 
             if False:
-                begin_wf_item (index = 71, name = "J-функция вода-газ")
+                begin_wf_item (index = 74, name = "J-функция вода-газ")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Jf_wg",
@@ -1239,11 +1279,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="(pc_wg / 16 ) *sqrt (PERMX/PORO)*3.1415",
                       variables=variables)
-                end_wf_item (index = 71)
+                end_wf_item (index = 74)
 
 
             if False:
-                begin_wf_item (index = 72, name = "Sw norm")
+                begin_wf_item (index = 75, name = "Sw norm")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Sw_WO_norm",
@@ -1255,11 +1295,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="if(Jf_wo==0,1,min(pow((Jf_wo/0.05), (1/(-1.5))),1))",
                       variables=variables)
-                end_wf_item (index = 72)
+                end_wf_item (index = 75)
 
 
             if False:
-                begin_wf_item (index = 73, name = "Sw norm")
+                begin_wf_item (index = 76, name = "Sw norm")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Sw_WG_norm",
@@ -1271,11 +1311,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="if(Jf_wg==0,1,min(pow((Jf_wg/0.05), (1/(-1.5))),1))",
                       variables=variables)
-                end_wf_item (index = 73)
+                end_wf_item (index = 76)
 
 
             if False:
-                begin_wf_item (index = 74, name = "Sw WO")
+                begin_wf_item (index = 77, name = "Sw WO")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Sw_WO",
@@ -1287,11 +1327,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="SWL + (1 - SWL)*Sw_WO_norm",
                       variables=variables)
-                end_wf_item (index = 74)
+                end_wf_item (index = 77)
 
 
             if False:
-                begin_wf_item (index = 75, name = "Sw WG")
+                begin_wf_item (index = 78, name = "Sw WG")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Sw_WG",
@@ -1303,11 +1343,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="SWL + (1 - SWL)*Sw_WG_norm",
                       variables=variables)
-                end_wf_item (index = 75)
+                end_wf_item (index = 78)
 
 
             if False:
-                begin_wf_item (index = 76, name = "Sw")
+                begin_wf_item (index = 79, name = "Sw")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Sw_init",
@@ -1319,11 +1359,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="if(GasOilWater_zone == 1, Sw_WO, Sw_WG)",
                       variables=variables)
-                end_wf_item (index = 76)
+                end_wf_item (index = 79)
 
 
             if False:
-                begin_wf_item (index = 77, name = "Sg")
+                begin_wf_item (index = 80, name = "Sg")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="Sg_init",
@@ -1335,11 +1375,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="if(GasOilWater_zone == 2, 1 - Sw_init, 0)",
                       variables=variables)
-                end_wf_item (index = 77)
+                end_wf_item (index = 80)
 
 
             if False:
-                begin_wf_item (index = 78, name = "So")
+                begin_wf_item (index = 81, name = "So")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="So__init",
@@ -1351,11 +1391,11 @@ def full (variables = full_variables):
                       value=0),
                       formula="if(GasOilWater_zone == 1, 1 - Sw_init, 0)",
                       variables=variables)
-                end_wf_item (index = 78)
+                end_wf_item (index = 81)
 
 
             if False:
-                begin_wf_item (index = 79, name = "So")
+                begin_wf_item (index = 82, name = "So")
                 grid_property_calculator (mesh=find_object (name="test_grid",
                       type="Grid3d"),
                       result_grid_property=find_object (name="test",
@@ -1367,15 +1407,15 @@ def full (variables = full_variables):
                       value=0),
                       formula="if(Sw_init + Sg_init + So__init > 1, 1, 0)",
                       variables=variables)
-                end_wf_item (index = 79)
+                end_wf_item (index = 82)
 
 
 
-        end_wf_item (index = 62)
+        end_wf_item (index = 65)
 
 
     if False:
-        begin_wf_item (index = 81, name = "ОФП", collapsed = True)
+        begin_wf_item (index = 84, name = "ОФП", collapsed = True)
         workflow_folder ()
         if True:
             pass
@@ -1383,18 +1423,18 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 82)
+                begin_wf_item (index = 85)
                 rp_create_by_corey (correlation_type="Corey",
                       rp_phases="oil_and_gas",
                       clear_tables=True,
                       wo_params_tables=[{"table_name" : "Table", "S_PL" : 0.3, "S_PU" : 0.9, "S_PCR" : 0.33, "S_OPCR" : 0.43, "k_rOLP" : 1, "k_rORP" : 1, "k_rPR" : 0.2, "k_rPU" : 1, "p_cOP" : 0.03, "N_OP" : 1.5, "N_P" : 2.5, "N_pcap" : 1.5, "S_OPL" : 0, "S_pc" : -1, "T_P" : 0, "E_P" : 0, "T_OP" : 0, "E_OP" : 0}],
                       go_params_tables=[{"table_name" : "Table", "S_PL" : 0.1, "S_PU" : 0.7, "S_PCR" : 0.11, "S_OPCR" : 0.35, "k_rOLP" : 1, "k_rORP" : 1, "k_rPR" : 0.6, "k_rPU" : 1, "p_cOP" : 0, "N_OP" : 1.5, "N_P" : 2.5, "N_pcap" : 1.5, "S_OPL" : 0, "S_pc" : -1, "T_P" : 0, "E_P" : 0, "T_OP" : 0, "E_OP" : 0}],
                       wg_params_tables=[{"table_name" : "Table", "S_PL" : 0.05, "S_PU" : 0.95, "S_PCR" : 0.15, "S_OPCR" : 0.3, "k_rOLP" : 0.9, "k_rORP" : 0.7, "k_rPR" : 0.4, "k_rPU" : 0.55, "p_cOP" : 0.11, "N_OP" : 2, "N_P" : 2, "N_pcap" : 2, "S_OPL" : 0, "S_pc" : 0.2, "T_P" : 0, "E_P" : 0, "T_OP" : 0, "E_OP" : 0}])
-                end_wf_item (index = 82)
+                end_wf_item (index = 85)
 
 
             if False:
-                begin_wf_item (index = 83, name = "Вода - нефть")
+                begin_wf_item (index = 86, name = "Вода - нефть")
                 workflow_folder ()
                 if True:
                     pass
@@ -1402,7 +1442,7 @@ def full (variables = full_variables):
 
 
                     if False:
-                        begin_wf_item (index = 84, name = "SWCR")
+                        begin_wf_item (index = 87, name = "SWCR")
                         grid_property_calculator (mesh=find_object (name="test_grid",
                               type="Grid3d"),
                               result_grid_property=find_object (name="SWCR",
@@ -1414,11 +1454,11 @@ def full (variables = full_variables):
                               value=0),
                               formula="SWL + 0.04",
                               variables=variables)
-                        end_wf_item (index = 84)
+                        end_wf_item (index = 87)
 
 
                     if False:
-                        begin_wf_item (index = 85, name = "SOWCR")
+                        begin_wf_item (index = 88, name = "SOWCR")
                         grid_property_calculator (mesh=find_object (name="test_grid",
                               type="Grid3d"),
                               result_grid_property=find_object (name="SOWCR",
@@ -1430,11 +1470,11 @@ def full (variables = full_variables):
                               value=0),
                               formula="if(1.49*PORO+8.25/100+SWCR>0.99,0.99-SWCR,1.49*PORO+8.25/100)\n",
                               variables=variables)
-                        end_wf_item (index = 85)
+                        end_wf_item (index = 88)
 
 
                     if False:
-                        begin_wf_item (index = 86, name = "KRW")
+                        begin_wf_item (index = 89, name = "KRW")
                         grid_property_calculator (mesh=find_object (name="test_grid",
                               type="Grid3d"),
                               result_grid_property=find_object (name="KRW",
@@ -1446,11 +1486,11 @@ def full (variables = full_variables):
                               value=0),
                               formula="if(0.0008437*EXP(3.9609713*PERMX)*3>0.8, 0.8, 0.0008437*EXP(3.9609713*PERMX)*3)",
                               variables=variables)
-                        end_wf_item (index = 86)
+                        end_wf_item (index = 89)
 
 
                     if False:
-                        begin_wf_item (index = 87, name = "KRO")
+                        begin_wf_item (index = 90, name = "KRO")
                         grid_property_calculator (mesh=find_object (name="test_grid",
                               type="Grid3d"),
                               result_grid_property=find_object (name="KRO",
@@ -1462,11 +1502,11 @@ def full (variables = full_variables):
                               value=0),
                               formula="if(0.010159*EXP(3.140385*PERMX)*3>0.8,0.8,0.010159*EXP(3.140385*PERMX)*3)",
                               variables=variables)
-                        end_wf_item (index = 87)
+                        end_wf_item (index = 90)
 
 
                     if False:
-                        begin_wf_item (index = 88, name = "KRWR")
+                        begin_wf_item (index = 91, name = "KRWR")
                         grid_property_calculator (mesh=find_object (name="test_grid",
                               type="Grid3d"),
                               result_grid_property=find_object (name="KRWR",
@@ -1478,11 +1518,11 @@ def full (variables = full_variables):
                               value=0),
                               formula="if(0.0000000488*EXP(39.5919260694*(SOWCR+0.02))*3>KRW,KRW,0.0000000488*EXP(39.5919260694*(SOWCR+0.02))*3)",
                               variables=variables)
-                        end_wf_item (index = 88)
+                        end_wf_item (index = 91)
 
 
                     if False:
-                        begin_wf_item (index = 89, name = "KRORW")
+                        begin_wf_item (index = 92, name = "KRORW")
                         grid_property_calculator (mesh=find_object (name="test_grid",
                               type="Grid3d"),
                               result_grid_property=find_object (name="KRORW",
@@ -1494,19 +1534,19 @@ def full (variables = full_variables):
                               value=0),
                               formula="if(0.00000246*EXP(32.67630164*(SOWCR+0.02))*3>KRO,KRO,0.00000246*EXP(32.67630164*(SOWCR+0.02))*3)",
                               variables=variables)
-                        end_wf_item (index = 89)
+                        end_wf_item (index = 92)
 
 
 
-                end_wf_item (index = 83)
+                end_wf_item (index = 86)
 
 
 
-        end_wf_item (index = 81)
+        end_wf_item (index = 84)
 
 
     if False:
-        begin_wf_item (index = 92, name = "EQUIL", collapsed = True)
+        begin_wf_item (index = 95, name = "EQUIL", collapsed = True)
         workflow_folder ()
         if True:
             pass
@@ -1514,7 +1554,7 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 93, is_custom_code = True, name = "Генерация контактов")
+                begin_wf_item (index = 96, is_custom_code = True, name = "Генерация контактов")
                 def write_equil(text_line: str, status: bool=False):
                 	# Поменять путь
                 	file_path = r"D:\14. Кейсы\005. IRM\models\Equil\EQUIL.inc"
@@ -1539,46 +1579,46 @@ def full (variables = full_variables):
 
 
 
-                end_wf_item (index = 93)
+                end_wf_item (index = 96)
 
 
             if False:
-                begin_wf_item (index = 94, name = "EQUIL")
+                begin_wf_item (index = 97, name = "EQUIL")
                 simple_props_import_e100_format (prop_item_type="equil_v2",
                       region_count=7,
                       file_name="D:/14. Кейсы/005. IRM/models/Equil/EQUIL.inc",
                       units_system="METRIC",
                       clear_tables=True)
-                end_wf_item (index = 94)
+                end_wf_item (index = 97)
 
 
             if False:
-                begin_wf_item (index = 95)
+                begin_wf_item (index = 98)
                 adjust_props_rock (property_name="Сжимаемость породы 1",
                       property_folder="Сжимаемость породы",
                       values=[[arithmetic (expression=resolve_variables_in_string (string_with_variables="@PRESSURE@",
                       variables=variables),
                       variables=variables), 0.00005]],
                       mode="adjust")
-                end_wf_item (index = 95)
+                end_wf_item (index = 98)
 
 
             if False:
-                begin_wf_item (index = 96, name = "RSVD")
+                begin_wf_item (index = 99, name = "RSVD")
                 simple_props_import_e100_format (prop_item_type="rsvd",
                       region_count=7,
                       file_name="D:/14. Кейсы/005. IRM/models/Equil/EQUIL.inc",
                       units_system="METRIC",
                       clear_tables=True)
-                end_wf_item (index = 96)
+                end_wf_item (index = 99)
 
 
 
-        end_wf_item (index = 92)
+        end_wf_item (index = 95)
 
 
     if False:
-        begin_wf_item (index = 98, name = "create GDM", collapsed = True)
+        begin_wf_item (index = 101, name = "create GDM", collapsed = True)
         workflow_folder ()
         if True:
             pass
@@ -1586,18 +1626,18 @@ def full (variables = full_variables):
 
 
             if False:
-                begin_wf_item (index = 99)
+                begin_wf_item (index = 102)
                 runspec_mapping (cases=find_object (name="DynamicModel",
                       type="Model_ex"),
                       action="add",
                       autofill=True,
                       runspec_table=[{"hierarchy" : "main", "kw_group" : "Fluid Composition", "description" : "В расчёте есть вода", "kw" : "WATER", "buffer" : ""}, {"hierarchy" : "main", "kw_group" : "Fluid Composition", "description" : "В расчёте есть газ", "kw" : "GAS", "buffer" : ""}, {"hierarchy" : "main", "kw_group" : "Fluid Composition", "description" : "В расчёте есть растворенный в нефти газ", "kw" : "DISGAS", "buffer" : ""}, {"hierarchy" : "main", "kw_group" : "Dimensions", "description" : "Размерности таблиц равновесия", "kw" : "EQLDIMS", "buffer" : "/\n\n"}, {"hierarchy" : "main", "kw_group" : "Tuning", "description" : "Настройки чтения и расчёта модели", "kw" : "TNAVCTRL", "buffer" : "LONGNAMES YES  /\n E1_E3_BINARY_EXPORT ON  /\n /\n\n"}, {"hierarchy" : "main", "kw_group" : "Other", "description" : "Опции равновесия", "kw" : "EQLOPTS", "buffer" : "NONEQSAT /\n"}, {"hierarchy" : "main", "kw_group" : "Options", "description" : "Исп. масштабирование концевых точек", "kw" : "ENDSCALE", "buffer" : "2* 1 /\n\n"}, {"hierarchy" : "main", "kw_group" : "Fluid Composition", "description" : "Задаёт, что в расчёте есть нефть", "kw" : "OIL", "buffer" : ""}, {"hierarchy" : "main", "kw_group" : "Options", "description" : "Задаёт объединение выходных файлов", "kw" : "UNIFOUT", "buffer" : ""}],
                       variables=variables)
-                end_wf_item (index = 99)
+                end_wf_item (index = 102)
 
 
             if False:
-                begin_wf_item (index = 100)
+                begin_wf_item (index = 103)
                 static_mapping (cases=find_object (name="DynamicModel",
                       type="Model_ex"),
                       grid=find_object (name="test_grid",
@@ -1624,39 +1664,6 @@ def full (variables = full_variables):
                       type="Grid3dProperty"), "constant" : None, "porosity" : "matrix"}, {"description" : "ID_SWL", "keyword" : "SWL", "component" : None, "property" : find_object (name="SWL",
                       type="Grid3dProperty"), "constant" : None, "porosity" : "matrix"}, {"description" : "ID_FIPXXX", "keyword" : "FIPNUM", "component" : None, "property" : find_object (name="Segments",
                       type="Grid3dProperty"), "constant" : None, "porosity" : "matrix"}])
-                end_wf_item (index = 100)
-
-
-            if False:
-                begin_wf_item (index = 101)
-                fluids_mapping (cases=find_object (name="DynamicModel",
-                      type="Model_ex"),
-                      group="PVT",
-                      type="blackoil pvt",
-                      action="replace",
-                      fluids_table=[{"region" : 1, "property" : "Вариант 1 (PVT Data)"}])
-                end_wf_item (index = 101)
-
-
-            if False:
-                begin_wf_item (index = 102)
-                fluids_mapping (cases=find_object (name="DynamicModel",
-                      type="Model_ex"),
-                      group="Rock",
-                      type="rock",
-                      action="replace",
-                      fluids_table=[{"region" : 1, "property" : "Сжимаемость породы 1"}])
-                end_wf_item (index = 102)
-
-
-            if False:
-                begin_wf_item (index = 103)
-                fluids_mapping (cases=find_object (name="DynamicModel",
-                      type="Model_ex"),
-                      group="Initial",
-                      type="equil_v2",
-                      action="replace",
-                      fluids_table=[{"region" : 1, "property" : "EQUIL.inc 1 1"}, {"region" : 2, "property" : "EQUIL.inc 2 1"}, {"region" : 3, "property" : "EQUIL.inc 3 1"}, {"region" : 4, "property" : "EQUIL.inc 4 1"}, {"region" : 5, "property" : "EQUIL.inc 5 1"}, {"region" : 6, "property" : "EQUIL.inc 6 1"}, {"region" : 7, "property" : "EQUIL.inc 7 1"}])
                 end_wf_item (index = 103)
 
 
@@ -1664,10 +1671,10 @@ def full (variables = full_variables):
                 begin_wf_item (index = 104)
                 fluids_mapping (cases=find_object (name="DynamicModel",
                       type="Model_ex"),
-                      group="Initial",
-                      type="rsvd",
+                      group="PVT",
+                      type="blackoil pvt",
                       action="replace",
-                      fluids_table=[{"region" : 1, "property" : "EQUIL.inc 1 2"}, {"region" : 2, "property" : "EQUIL.inc 2 2"}, {"region" : 3, "property" : "EQUIL.inc 3 2"}, {"region" : 4, "property" : "EQUIL.inc 4 2"}, {"region" : 5, "property" : "EQUIL.inc 5 2"}, {"region" : 6, "property" : "EQUIL.inc 6 2"}, {"region" : 7, "property" : "EQUIL.inc 7 2"}])
+                      fluids_table=[{"region" : 1, "property" : "Вариант 1 (PVT Data)"}])
                 end_wf_item (index = 104)
 
 
@@ -1675,31 +1682,64 @@ def full (variables = full_variables):
                 begin_wf_item (index = 105)
                 fluids_mapping (cases=find_object (name="DynamicModel",
                       type="Model_ex"),
-                      group="KRP",
-                      type="rp_project",
+                      group="Rock",
+                      type="rock",
                       action="replace",
-                      fluids_table=[{"region" : 1, "property" : "Table (Проект ОФП)"}, {"region" : 2, "property" : "Table (Проект ОФП)"}, {"region" : 3, "property" : "Table (Проект ОФП)"}, {"region" : 4, "property" : "Table (Проект ОФП)"}, {"region" : 5, "property" : "Table (Проект ОФП)"}, {"region" : 6, "property" : "Table (Проект ОФП)"}, {"region" : 7, "property" : "Table (Проект ОФП)"}])
+                      fluids_table=[{"region" : 1, "property" : "Сжимаемость породы 1"}])
                 end_wf_item (index = 105)
 
 
             if False:
                 begin_wf_item (index = 106)
+                fluids_mapping (cases=find_object (name="DynamicModel",
+                      type="Model_ex"),
+                      group="Initial",
+                      type="equil_v2",
+                      action="replace",
+                      fluids_table=[{"region" : 1, "property" : "EQUIL.inc 1 1"}, {"region" : 2, "property" : "EQUIL.inc 2 1"}, {"region" : 3, "property" : "EQUIL.inc 3 1"}, {"region" : 4, "property" : "EQUIL.inc 4 1"}, {"region" : 5, "property" : "EQUIL.inc 5 1"}, {"region" : 6, "property" : "EQUIL.inc 6 1"}, {"region" : 7, "property" : "EQUIL.inc 7 1"}])
+                end_wf_item (index = 106)
+
+
+            if False:
+                begin_wf_item (index = 107)
+                fluids_mapping (cases=find_object (name="DynamicModel",
+                      type="Model_ex"),
+                      group="Initial",
+                      type="rsvd",
+                      action="replace",
+                      fluids_table=[{"region" : 1, "property" : "EQUIL.inc 1 2"}, {"region" : 2, "property" : "EQUIL.inc 2 2"}, {"region" : 3, "property" : "EQUIL.inc 3 2"}, {"region" : 4, "property" : "EQUIL.inc 4 2"}, {"region" : 5, "property" : "EQUIL.inc 5 2"}, {"region" : 6, "property" : "EQUIL.inc 6 2"}, {"region" : 7, "property" : "EQUIL.inc 7 2"}])
+                end_wf_item (index = 107)
+
+
+            if False:
+                begin_wf_item (index = 108)
+                fluids_mapping (cases=find_object (name="DynamicModel",
+                      type="Model_ex"),
+                      group="KRP",
+                      type="rp_project",
+                      action="replace",
+                      fluids_table=[{"region" : 1, "property" : "Table (Проект ОФП)"}, {"region" : 2, "property" : "Table (Проект ОФП)"}, {"region" : 3, "property" : "Table (Проект ОФП)"}, {"region" : 4, "property" : "Table (Проект ОФП)"}, {"region" : 5, "property" : "Table (Проект ОФП)"}, {"region" : 6, "property" : "Table (Проект ОФП)"}, {"region" : 7, "property" : "Table (Проект ОФП)"}])
+                end_wf_item (index = 108)
+
+
+            if False:
+                begin_wf_item (index = 109)
                 open_or_reload_dynamic_model (use_model=False,
                       model=find_object (name="DynamicModel",
                       type="Model_ex"),
                       result_name="result")
-                end_wf_item (index = 106)
+                end_wf_item (index = 109)
 
 
-            begin_wf_item (index = 107, name = "Посянения к формату выгружаемых кубов")
+            begin_wf_item (index = 110, name = "Посянения к формату выгружаемых кубов")
             comment_text ("""
 Кубы свойст нужно сохранять в формате .INC
 """)
-            end_wf_item (index = 107)
+            end_wf_item (index = 110)
 
 
             if False:
-                begin_wf_item (index = 108, name = "Нефть")
+                begin_wf_item (index = 111, name = "Нефть")
                 workflow_folder ()
                 if True:
                     pass
@@ -1707,7 +1747,7 @@ def full (variables = full_variables):
 
 
                     if False:
-                        begin_wf_item (index = 109, name = "массовые запасы нефти")
+                        begin_wf_item (index = 112, name = "массовые запасы нефти")
                         grid_property_export_gridecl_format (grid=find_object (name="DynamicModel (Гидродинамическая модель)",
                               type="gt_tnav_grid_3d_data"),
                               grid_property=find_object (name="OIPM",
@@ -1719,11 +1759,11 @@ def full (variables = full_variables):
                               inactive_placeholder="0",
                               separate_by_comment=False,
                               units_system="metric")
-                        end_wf_item (index = 109)
+                        end_wf_item (index = 112)
 
 
                     if False:
-                        begin_wf_item (index = 110, name = "проницаемость")
+                        begin_wf_item (index = 113, name = "проницаемость")
                         grid_property_export_gridecl_format (grid=find_object (name="DynamicModel (Гидродинамическая модель)",
                               type="gt_tnav_grid_3d_data"),
                               grid_property=find_object (name="INIT_PERMX",
@@ -1735,11 +1775,11 @@ def full (variables = full_variables):
                               inactive_placeholder="0",
                               separate_by_comment=False,
                               units_system="metric")
-                        end_wf_item (index = 110)
+                        end_wf_item (index = 113)
 
 
                     if False:
-                        begin_wf_item (index = 111, name = "регионы")
+                        begin_wf_item (index = 114, name = "регионы")
                         grid_property_export_gridecl_format (grid=find_object (name="DynamicModel (Гидродинамическая модель)",
                               type="gt_tnav_grid_3d_data"),
                               grid_property=find_object (name="EQLNUM",
@@ -1751,15 +1791,15 @@ def full (variables = full_variables):
                               inactive_placeholder="0",
                               separate_by_comment=False,
                               units_system="metric")
-                        end_wf_item (index = 111)
+                        end_wf_item (index = 114)
 
 
 
-                end_wf_item (index = 108)
+                end_wf_item (index = 111)
 
 
             if False:
-                begin_wf_item (index = 113, name = "Газ")
+                begin_wf_item (index = 116, name = "Газ")
                 workflow_folder ()
                 if True:
                     pass
@@ -1767,7 +1807,7 @@ def full (variables = full_variables):
 
 
                     if False:
-                        begin_wf_item (index = 114, name = "массовые запасы газа")
+                        begin_wf_item (index = 117, name = "массовые запасы газа")
                         grid_property_export_gridecl_format (grid=find_object (name="DynamicModel (Гидродинамическая модель)",
                               type="gt_tnav_grid_3d_data"),
                               grid_property=find_object (name="GIPM",
@@ -1779,11 +1819,11 @@ def full (variables = full_variables):
                               inactive_placeholder="0",
                               separate_by_comment=False,
                               units_system="metric")
-                        end_wf_item (index = 114)
+                        end_wf_item (index = 117)
 
 
                     if False:
-                        begin_wf_item (index = 115, name = "проницаемость")
+                        begin_wf_item (index = 118, name = "проницаемость")
                         grid_property_export_gridecl_format (grid=find_object (name="DynamicModel (Гидродинамическая модель)",
                               type="gt_tnav_grid_3d_data"),
                               grid_property=find_object (name="INIT_PERMX",
@@ -1795,11 +1835,11 @@ def full (variables = full_variables):
                               inactive_placeholder="0",
                               separate_by_comment=False,
                               units_system="metric")
-                        end_wf_item (index = 115)
+                        end_wf_item (index = 118)
 
 
                     if False:
-                        begin_wf_item (index = 116, name = "регионы")
+                        begin_wf_item (index = 119, name = "регионы")
                         grid_property_export_gridecl_format (grid=find_object (name="DynamicModel (Гидродинамическая модель)",
                               type="gt_tnav_grid_3d_data"),
                               grid_property=find_object (name="EQLNUM",
@@ -1811,806 +1851,808 @@ def full (variables = full_variables):
                               inactive_placeholder="0",
                               separate_by_comment=False,
                               units_system="metric")
-                        end_wf_item (index = 116)
+                        end_wf_item (index = 119)
 
 
 
-                end_wf_item (index = 113)
+                end_wf_item (index = 116)
 
 
 
-        end_wf_item (index = 98)
+        end_wf_item (index = 101)
 
 
-    begin_wf_item (index = 119, name = "Casekill")
-    workflow_folder ()
-    if True:
-        pass
+    if False:
+        begin_wf_item (index = 122, name = "Casekill", collapsed = True)
+        workflow_folder ()
+        if True:
+            pass
 
 
 
-        if False:
-            begin_wf_item (index = 120, is_custom_code = True, name = "Manager param")
+            if False:
+                begin_wf_item (index = 123, is_custom_code = True, name = "Manager param")
 
-            class Manager:
-                def __init__(self, variable_file: str, config_varibale: str, default_variables: str):
-                    self.variable_file = Manager.check_file(variable_file)
-                    self.config_variable_file = Manager.check_file(config_varibale)
-                    self.default_variables_file = Manager.check_file(default_variables)
-                    self.load_variable(), self.load_config_variable()
+                class Manager:
+                    def __init__(self, variable_file: str, config_varibale: str, default_variables: str):
+                        self.variable_file = Manager.check_file(variable_file)
+                        self.config_variable_file = Manager.check_file(config_varibale)
+                        self.default_variables_file = Manager.check_file(default_variables)
+                        self.load_variable(), self.load_config_variable()
 
-                @staticmethod
-                def check_file(file_path: str):
-                    """
-                    Проверяет, что файл существует, является JSON файлом и другие условия.
-                    """
-                    if not os.path.exists(file_path):
-                        raise FileNotFoundError(f"Файл {file_path} не найден.")
-                    if not file_path.lower().endswith('.json'):
-                        raise ValueError(f"Файл {file_path} не является JSON файлом.")
-                    if not os.access(file_path, os.R_OK):
-                        raise PermissionError(f"Файл {file_path} не доступен для чтения.")
-                    if os.path.getsize(file_path) == 0:
-                        raise ValueError(f"Файл {file_path} пустой.")
-                    try:
-                        with open(file_path, 'r', encoding='utf-8') as f:
-                            json.load(f)
-                    except json.JSONDecodeError:
-                        raise ValueError(f"Файл {file_path} содержит некорректный JSON.")
-                    return file_path
+                    @staticmethod
+                    def check_file(file_path: str):
+                        """
+                        Проверяет, что файл существует, является JSON файлом и другие условия.
+                        """
+                        if not os.path.exists(file_path):
+                            raise FileNotFoundError(f"Файл {file_path} не найден.")
+                        if not file_path.lower().endswith('.json'):
+                            raise ValueError(f"Файл {file_path} не является JSON файлом.")
+                        if not os.access(file_path, os.R_OK):
+                            raise PermissionError(f"Файл {file_path} не доступен для чтения.")
+                        if os.path.getsize(file_path) == 0:
+                            raise ValueError(f"Файл {file_path} пустой.")
+                        try:
+                            with open(file_path, 'r', encoding='utf-8') as f:
+                                json.load(f)
+                        except json.JSONDecodeError:
+                            raise ValueError(f"Файл {file_path} содержит некорректный JSON.")
+                        return file_path
 
-                @staticmethod
-                def convert_value_from_str(value, variable_type):
-                    """
-                    Преобразует значение в соответствующий тип данных.
-                    :param value: Значение переменной.
-                    :param variable_type: Тип данных переменной.
-                    :return: Преобразованное значение.
-                    """
-                    if value == '':
-                        return None
-                    if variable_type == "int":
-                        return int(value)
-                    elif variable_type == "float":
-                        return float(value)
-                    elif variable_type == "list":
-                        return json.loads(value)
-                    elif variable_type == "datetime":
-                        # Если Python имеет версию ранее 3.7
-                        return datetime.strptime(value, '%Y-%m-%d %H:%M:%S')
-                        # Если Python имеет версию позже 3.7
-                        # return datetime.fromisoformat(value)
-                    elif variable_type == 'bool':
-                        return bool(value)
-                    else:
-                        return value
-
-                @staticmethod
-                def convert_value_to_str(value, variable_type):
-                    """
-                    Преобразует значение в строку для сохранения в JSON.
-                    :param value: Значение переменной.
-                    :param variable_type: Тип данных переменной.
-                    :return: Преобразованное значение в строку.
-                    """
-                    if variable_type == "list":
-                        return json.dumps(value)
-                    elif variable_type == "datetime":
-                        # Если Python имеет версию ранее 3.7
-                        return value.strftime('%Y-%m-%d %H:%M:%S')
-                        # Если Python имеет версию позже 3.7
-                        # return value.isoformat()
-                    else:
-                        return str(value)
-
-                def load_variable(self):
-                    """
-                    Чтение json файла со значениями переменных
-                    :return: None
-                    """
-                    with open(self.variable_file, 'r', encoding='utf-8') as file:
-                        variable = json.load(file)
-                    self.variable = variable
-
-                def load_config_variable(self):
-                    """
-                    Чтение json файла с настройками переменными
-                    :return: None
-                    """
-                    with open(self.config_variable_file, 'r', encoding='utf-8') as file:
-                        config_variable = json.load(file)
-                    self.config_variable = config_variable
-
-                @property
-                def info_variable(self):
-                    """
-                    :return: Dict со значениями переменных
-                    """
-                    return self.variable
-
-                @property
-                def info_variable_settings(self):
-                    """
-                    :return: Dict настроек переменных
-                    """
-                    return self.config_variable
-
-                def get_variable(self, key: str):
-                    """
-                    Получает значение переменной по указанным ключам.
-                    :param key: Ключ для доступа к переменной.
-                    :return: Значение переменной.
-                    """
-                    if key in self.variable:
-                        if isinstance(key, str):
-                            return Manager.convert_value_from_str(self.variable[key], self.config_variable[key]['type'])
+                    @staticmethod
+                    def convert_value_from_str(value, variable_type):
+                        """
+                        Преобразует значение в соответствующий тип данных.
+                        :param value: Значение переменной.
+                        :param variable_type: Тип данных переменной.
+                        :return: Преобразованное значение.
+                        """
+                        if value == '':
+                            return None
+                        if variable_type == "int":
+                            return int(value)
+                        elif variable_type == "float":
+                            return float(value)
+                        elif variable_type == "list":
+                            return json.loads(value)
+                        elif variable_type == "datetime":
+                            # Если Python имеет версию ранее 3.7
+                            return datetime.strptime(value, '%Y-%m-%d %H:%M:%S')
+                            # Если Python имеет версию позже 3.7
+                            # return datetime.fromisoformat(value)
+                        elif variable_type == 'bool':
+                            return bool(value)
                         else:
-                            raise AssertionError("ключ {key} к переменной должен задаваться через ''")
-                    else:
-                        raise AssertionError(f"Переменная '{key}' не существует")
+                            return value
 
-                def set_variable(self, key: str, value):
-                    """
-                    Устанавливает значение переменной по указанным ключам.
-                    :param key: Ключи для доступа к переменной.
-                    :param value: Новое значение переменной.
-                    """
-                    if key in self.variable:
-                        if isinstance(key, str):
-                            self.variable[key] = Manager.convert_value_to_str(value, self.config_variable[key]['type'])
-                            self.save_variable()
+                    @staticmethod
+                    def convert_value_to_str(value, variable_type):
+                        """
+                        Преобразует значение в строку для сохранения в JSON.
+                        :param value: Значение переменной.
+                        :param variable_type: Тип данных переменной.
+                        :return: Преобразованное значение в строку.
+                        """
+                        if variable_type == "list":
+                            return json.dumps(value)
+                        elif variable_type == "datetime":
+                            # Если Python имеет версию ранее 3.7
+                            return value.strftime('%Y-%m-%d %H:%M:%S')
+                            # Если Python имеет версию позже 3.7
+                            # return value.isoformat()
                         else:
-                            raise AssertionError("ключ {key} к переменной должен задаваться через ''")
-                    else:
-                        raise AssertionError(f"Переменная '{key}' не существует")
+                            return str(value)
 
-                def save_variable(self):
-                    """
-                    Сохраняет изменения в JSON файл.
-                    """
-                    with open(self.variable_file, 'w', encoding='utf-8') as file:
-                        json.dump(self.variable, file, ensure_ascii=False, indent=4)
+                    def load_variable(self):
+                        """
+                        Чтение json файла со значениями переменных
+                        :return: None
+                        """
+                        with open(self.variable_file, 'r', encoding='utf-8') as file:
+                            variable = json.load(file)
+                        self.variable = variable
 
-                def help_variable(self, variable_name):
-                    """
-                    Получает информацию о переменной по её имени.
-                    :param variable_name: Имя переменной.
-                    :return: Информация о переменной.
-                    """
-                    variable_info = self.config_variable.get(variable_name, "Переменная не найдена")
-                    if isinstance(variable_info, dict):
-                        print(f"Информация о переменной '{variable_name}':")
-                        for key, value in variable_info.items():
-                            print(f" {key}: {value}")
-                    else:
-                        print(variable_info)
-                    return variable_info
+                    def load_config_variable(self):
+                        """
+                        Чтение json файла с настройками переменными
+                        :return: None
+                        """
+                        with open(self.config_variable_file, 'r', encoding='utf-8') as file:
+                            config_variable = json.load(file)
+                        self.config_variable = config_variable
 
-                def help_field(self, field_name):
-                    """
-                    Получает информацию о всех переменных по указанному полю.
-                    :param field_name: Имя поля (например, 'description').
-                    :return: Словарь с информацией о переменных.
-                    """
-                    field_info = {}
-                    for variable_name, variable_info in self.config_variable.items():
-                        if field_name in variable_info:
-                            field_info[variable_name] = variable_info[field_name]
-                            print(f"{variable_name}: {variable_info[field_name]}")
-                    return field_info
+                    @property
+                    def info_variable(self):
+                        """
+                        :return: Dict со значениями переменных
+                        """
+                        return self.variable
 
-                def reset_to_default(self):
-                    """
-                    Сбрасывает все изменения и возвращает переменные к значениям по умолчанию.
-                    """
-                    shutil.copyfile(self.default_variables_file, self.variable_file)
-                    self.load_variable()
-            end_wf_item (index = 120)
+                    @property
+                    def info_variable_settings(self):
+                        """
+                        :return: Dict настроек переменных
+                        """
+                        return self.config_variable
 
+                    def get_variable(self, key: str):
+                        """
+                        Получает значение переменной по указанным ключам.
+                        :param key: Ключ для доступа к переменной.
+                        :return: Значение переменной.
+                        """
+                        if key in self.variable:
+                            if isinstance(key, str):
+                                return Manager.convert_value_from_str(self.variable[key], self.config_variable[key]['type'])
+                            else:
+                                raise AssertionError("ключ {key} к переменной должен задаваться через ''")
+                        else:
+                            raise AssertionError(f"Переменная '{key}' не существует")
 
-        begin_wf_item (index = 121, is_custom_code = True, name = "start")
-        def run_script(script_path):
-            runpy.run_path(script_path, run_name='__main__')
+                    def set_variable(self, key: str, value):
+                        """
+                        Устанавливает значение переменной по указанным ключам.
+                        :param key: Ключи для доступа к переменной.
+                        :param value: Новое значение переменной.
+                        """
+                        if key in self.variable:
+                            if isinstance(key, str):
+                                self.variable[key] = Manager.convert_value_to_str(value, self.config_variable[key]['type'])
+                                self.save_variable()
+                            else:
+                                raise AssertionError("ключ {key} к переменной должен задаваться через ''")
+                        else:
+                            raise AssertionError(f"Переменная '{key}' не существует")
 
-        if __name__ == "__main__":
-            script_path = "D:\14. Кейсы\005. IRM\app\smartcase.py"  # Укажите путь к файлу script_to_run.py
-            run_script(script_path)
-        end_wf_item (index = 121)
+                    def save_variable(self):
+                        """
+                        Сохраняет изменения в JSON файл.
+                        """
+                        with open(self.variable_file, 'w', encoding='utf-8') as file:
+                            json.dump(self.variable, file, ensure_ascii=False, indent=4)
 
+                    def help_variable(self, variable_name):
+                        """
+                        Получает информацию о переменной по её имени.
+                        :param variable_name: Имя переменной.
+                        :return: Информация о переменной.
+                        """
+                        variable_info = self.config_variable.get(variable_name, "Переменная не найдена")
+                        if isinstance(variable_info, dict):
+                            print(f"Информация о переменной '{variable_name}':")
+                            for key, value in variable_info.items():
+                                print(f" {key}: {value}")
+                        else:
+                            print(variable_info)
+                        return variable_info
 
-        if False:
-            begin_wf_item (index = 122, name = "Опция \"Нефть\"")
-            workflow_folder ()
-            if True:
-                pass
+                    def help_field(self, field_name):
+                        """
+                        Получает информацию о всех переменных по указанному полю.
+                        :param field_name: Имя поля (например, 'description').
+                        :return: Словарь с информацией о переменных.
+                        """
+                        field_info = {}
+                        for variable_name, variable_info in self.config_variable.items():
+                            if field_name in variable_info:
+                                field_info[variable_name] = variable_info[field_name]
+                                print(f"{variable_name}: {variable_info[field_name]}")
+                        return field_info
 
-
-
-                if False:
-                    begin_wf_item (index = 123, is_custom_code = True, name = "Определение переменных моделей")
-                    manager_oil = Manager(
-                    	variable_file = r"D:\Orher\oil\variable.json", 
-                    	config_varibale = r"D:\14. Кейсы\005. IRM\models\Example\02_oil\variable_directory\conditions_variable.json", 
-                    	default_variables = r"D:\14. Кейсы\005. IRM\models\Example\02_oil\variable_directory\by_default_variables.json"
-                    	)
-
-                    # Вывод дополнительной информации о характеристик переменных
-                    print(manager_oil.help_field('description'))
-                    #		Доступно 
-                    #		"type", Тип данных
-                    #		"measure", Едицина измерения
-                    #		"description", Описание переменной
-                    #		"status_empty", Статус переменной, если переменная моежт быть пустой - True,иначе False
-                    #		"status_variable", Статус переменной, для чего используется переменная
-                    #		"limit" Верхние и нижние границы диапазаонов вариации переменных
-
-                    '''
-
-                    			Описание принимаемых атрибутов класса Manager
-
-                    variable_file = Заполняемый шаблон значений переменных. Который будет использован в качестве переменной для запуска main.exe
-                    config_varibale = Json файл с описанием переменных, типы, ограничения (менять не рекомендуется, т.к. main.exe ссылается своему config_varibale)
-                    default_variables = Пустой шаблон для сброса изменений значений переменных установленных в variable_file
-
-                    '''
-
-
-                    def get(key:str) -> None:
-                    	'''
-                    	Вывод сообщения 
-                    	'''
-                    	print(f"Установленное значение {key} = {manager_oil.get_variable(key)}")
-
-
-                    '''
-
-                    			Обязательные параметры расчета
-
-                    '''
-
-                    # Устанавливаем название расчета
-                    manager_oil.set_variable('name', 'OIL')
-                    get('name')
-
-                    # Устанавливаем начало расчета (согласно начальному времени расчета в проекте Дизайнера моеделей)
-                    manager_oil.set_variable('start', datetime(year=2024, month=1, day=1))
-                    get('start')
-
-                    # Устанавливаем время расчета (согласно времени расчета в проекте Дизайнера моеделей, в годах)
-                    manager_oil.set_variable('duration', 20)
-                    get('duration')
-
-                    # Устанавливаем абсолютный путь к выгруженным кубам свойств. В данном случае к директории с PERMX, OIPM
-                    manager_oil.set_variable('property_directory', r"D:\14. Кейсы\005. IRM\models\Example\02_oil\property_directory")
-                    get('property_directory')
-
-                    # Устанавливаем абсолютный путь к выгрузке координатной сетки
-                    manager_oil.set_variable('coord_directory', r"D:\14. Кейсы\005. IRM\models\Example\02_oil\coord_directory")
-                    get('coord_directory')
-
-                    # Устанавливаем абсолютный путь для сохранения результатов расчета скрипта
-                    manager_oil.set_variable('project_directory', r"D:\14. Кейсы\005. IRM\models\Example\02_oil\project_directory")
-                    get('project_directory')
-
-                    '''
-
-                    			Необязательные параметры
-
-                    '''
-
-                    # Устанавливаем абсолютный путь к выгруженныму кубу регионов. В данном случае к директории с EQLNUM
-                    manager_oil.set_variable('regions_directory', r"D:\14. Кейсы\005. IRM\models\Example\02_oil\regions_directory")
-                    get('regions_directory')
-
-                    # Устанавливаем абсолютный путь к выгруженныму кубу фильтра. В данном случае к директории, которая пустая (опция расчета с фильтром не будет использована)
-                    manager_oil.set_variable('mask_directory', r"D:\14. Кейсы\005. IRM\models\Example\02_oil\mask_directory")
-                    get('mask_directory')
-
-                    # Устанавливаем путь к растровой карте поверхности.
-                    # ВАЖНО!: Путь не должен содержать русскоязычные символы (из-за особенностей работы cv2)
-                    manager_oil.set_variable('map_directory', r"D:\maps")
-                    get('map_directory')
-
-                    # Дневная задержка по мобилизации БУ от начала времени расчета
-                    manager_oil.set_variable('relative_mob_start', 0)
-                    get('relative_mob_start')
-
-                    # Дневная задержка по запуску кейса от начала времени расчета
-                    # Допускаем, что от начала расчета и с момента готовности нефтяной инфраструктуры должно пройти 1.5 лет
-                    time_pause = int(1.5*365)
-                    manager_oil.set_variable('relative_pmr_start', time_pause)
-                    get('relative_pmr_start')
+                    def reset_to_default(self):
+                        """
+                        Сбрасывает все изменения и возвращает переменные к значениям по умолчанию.
+                        """
+                        shutil.copyfile(self.default_variables_file, self.variable_file)
+                        self.load_variable()
+                end_wf_item (index = 123)
 
 
-                    '''
+            if False:
+                begin_wf_item (index = 124, is_custom_code = True, name = "start")
+                def run_script(script_path):
+                    runpy.run_path(script_path, run_name='__main__')
 
-                    			Параметры оптимизации 
-
-                    '''
-
-                    # Устанавливаем параметр фильтрации для нормализованного куба PERMX x OIPM (Считается внутри main.exe)
-                    manager_oil.set_variable('selection', int(SELECTION_OIL))
-                    get('selection')
-
-                    # Устанавливаем ограничение на максимальное количество КП 
-                    manager_oil.set_variable('wp_max', int(WP_MAX_OIL))
-                    get('wp_max')
-
-                    # Устанавливаем ограничение на максимальное количество стволов 
-                    # wt_max - 1: заканчивание ГС, wt_max - 2: заканчивание двухстволка, wt_max = 3.заканчивание МЗС
-                    manager_oil.set_variable('wt_max', int(WT_MAX_OIL))
-                    get('wt_max')
-
-                    # Устанавливаем количество БУ под мобилиацию
-                    manager_oil.set_variable('mobil_dr', int(MOBIL_BU_OIL))
-                    get('mobil_dr')
-
-                    # Вывод всех переменных
-                    print(manager_oil.info_variable)
-
-                    # Вывод всех характеристик переменных
-                    print(manager_oil.info_variable_settings)
-                    end_wf_item (index = 123)
+                if __name__ == "__main__":
+                    script_path = "D:\14. Кейсы\005. IRM\app\smartcase.py"  # Укажите путь к файлу script_to_run.py
+                    run_script(script_path)
+                end_wf_item (index = 124)
 
 
-                begin_wf_item (index = 124, name = "Пояснения ")
-                comment_text ("""
+            if False:
+                begin_wf_item (index = 125, name = "Опция \"Нефть\"")
+                workflow_folder ()
+                if True:
+                    pass
+
+
+
+                    if False:
+                        begin_wf_item (index = 126, is_custom_code = True, name = "Определение переменных моделей")
+                        manager_oil = Manager(
+                        	variable_file = r"D:\Orher\oil\variable.json", 
+                        	config_varibale = r"D:\14. Кейсы\005. IRM\models\Example\02_oil\variable_directory\conditions_variable.json", 
+                        	default_variables = r"D:\14. Кейсы\005. IRM\models\Example\02_oil\variable_directory\by_default_variables.json"
+                        	)
+
+                        # Вывод дополнительной информации о характеристик переменных
+                        print(manager_oil.help_field('description'))
+                        #		Доступно 
+                        #		"type", Тип данных
+                        #		"measure", Едицина измерения
+                        #		"description", Описание переменной
+                        #		"status_empty", Статус переменной, если переменная моежт быть пустой - True,иначе False
+                        #		"status_variable", Статус переменной, для чего используется переменная
+                        #		"limit" Верхние и нижние границы диапазаонов вариации переменных
+
+                        '''
+
+                        			Описание принимаемых атрибутов класса Manager
+
+                        variable_file = Заполняемый шаблон значений переменных. Который будет использован в качестве переменной для запуска main.exe
+                        config_varibale = Json файл с описанием переменных, типы, ограничения (менять не рекомендуется, т.к. main.exe ссылается своему config_varibale)
+                        default_variables = Пустой шаблон для сброса изменений значений переменных установленных в variable_file
+
+                        '''
+
+
+                        def get(key:str) -> None:
+                        	'''
+                        	Вывод сообщения 
+                        	'''
+                        	print(f"Установленное значение {key} = {manager_oil.get_variable(key)}")
+
+
+                        '''
+
+                        			Обязательные параметры расчета
+
+                        '''
+
+                        # Устанавливаем название расчета
+                        manager_oil.set_variable('name', 'OIL')
+                        get('name')
+
+                        # Устанавливаем начало расчета (согласно начальному времени расчета в проекте Дизайнера моеделей)
+                        manager_oil.set_variable('start', datetime(year=2024, month=1, day=1))
+                        get('start')
+
+                        # Устанавливаем время расчета (согласно времени расчета в проекте Дизайнера моеделей, в годах)
+                        manager_oil.set_variable('duration', 20)
+                        get('duration')
+
+                        # Устанавливаем абсолютный путь к выгруженным кубам свойств. В данном случае к директории с PERMX, OIPM
+                        manager_oil.set_variable('property_directory', r"D:\14. Кейсы\005. IRM\models\Example\02_oil\property_directory")
+                        get('property_directory')
+
+                        # Устанавливаем абсолютный путь к выгрузке координатной сетки
+                        manager_oil.set_variable('coord_directory', r"D:\14. Кейсы\005. IRM\models\Example\02_oil\coord_directory")
+                        get('coord_directory')
+
+                        # Устанавливаем абсолютный путь для сохранения результатов расчета скрипта
+                        manager_oil.set_variable('project_directory', r"D:\14. Кейсы\005. IRM\models\Example\02_oil\project_directory")
+                        get('project_directory')
+
+                        '''
+
+                        			Необязательные параметры
+
+                        '''
+
+                        # Устанавливаем абсолютный путь к выгруженныму кубу регионов. В данном случае к директории с EQLNUM
+                        manager_oil.set_variable('regions_directory', r"D:\14. Кейсы\005. IRM\models\Example\02_oil\regions_directory")
+                        get('regions_directory')
+
+                        # Устанавливаем абсолютный путь к выгруженныму кубу фильтра. В данном случае к директории, которая пустая (опция расчета с фильтром не будет использована)
+                        manager_oil.set_variable('mask_directory', r"D:\14. Кейсы\005. IRM\models\Example\02_oil\mask_directory")
+                        get('mask_directory')
+
+                        # Устанавливаем путь к растровой карте поверхности.
+                        # ВАЖНО!: Путь не должен содержать русскоязычные символы (из-за особенностей работы cv2)
+                        manager_oil.set_variable('map_directory', r"D:\maps")
+                        get('map_directory')
+
+                        # Дневная задержка по мобилизации БУ от начала времени расчета
+                        manager_oil.set_variable('relative_mob_start', 0)
+                        get('relative_mob_start')
+
+                        # Дневная задержка по запуску кейса от начала времени расчета
+                        # Допускаем, что от начала расчета и с момента готовности нефтяной инфраструктуры должно пройти 1.5 лет
+                        time_pause = int(1.5*365)
+                        manager_oil.set_variable('relative_pmr_start', time_pause)
+                        get('relative_pmr_start')
+
+
+                        '''
+
+                        			Параметры оптимизации 
+
+                        '''
+
+                        # Устанавливаем параметр фильтрации для нормализованного куба PERMX x OIPM (Считается внутри main.exe)
+                        manager_oil.set_variable('selection', int(SELECTION_OIL))
+                        get('selection')
+
+                        # Устанавливаем ограничение на максимальное количество КП 
+                        manager_oil.set_variable('wp_max', int(WP_MAX_OIL))
+                        get('wp_max')
+
+                        # Устанавливаем ограничение на максимальное количество стволов 
+                        # wt_max - 1: заканчивание ГС, wt_max - 2: заканчивание двухстволка, wt_max = 3.заканчивание МЗС
+                        manager_oil.set_variable('wt_max', int(WT_MAX_OIL))
+                        get('wt_max')
+
+                        # Устанавливаем количество БУ под мобилиацию
+                        manager_oil.set_variable('mobil_dr', int(MOBIL_BU_OIL))
+                        get('mobil_dr')
+
+                        # Вывод всех переменных
+                        print(manager_oil.info_variable)
+
+                        # Вывод всех характеристик переменных
+                        print(manager_oil.info_variable_settings)
+                        end_wf_item (index = 126)
+
+
+                    begin_wf_item (index = 127, name = "Пояснения ")
+                    comment_text ("""
 Путь к variable_file должен:
 1) Совпадать с self.variable_file класса Manager для объекта manager_oil
 2) Не должен содержать русскоязычные символы (из-за особеностей кодировщика)
 """)
-                end_wf_item (index = 124)
+                    end_wf_item (index = 127)
 
 
-                if False:
-                    begin_wf_item (index = 125, name = "Запуск main.exe")
-                    execute_external_program (program="D:/14. Кейсы/005. IRM/res/SmartCase/SmartCase.exe",
-                          arguments="\"D:\\Orher\\oil\\variable.json\"",
-                          use_working_directory=False,
-                          working_directory="")
-                    end_wf_item (index = 125)
+                    if False:
+                        begin_wf_item (index = 128, name = "Запуск main.exe")
+                        execute_external_program (program="D:/14. Кейсы/005. IRM/res/SmartCase/SmartCase.exe",
+                              arguments="\"D:\\Orher\\oil\\variable.json\"",
+                              use_working_directory=False,
+                              working_directory="")
+                        end_wf_item (index = 128)
 
 
-                if False:
-                    begin_wf_item (index = 126, name = "Работа с скважинами")
-                    workflow_folder ()
-                    if True:
-                        pass
-
-
-
-                        if False:
-                            begin_wf_item (index = 127, is_custom_code = True, name = "Удалить")
-                            print(get_all_wells())
-                            for w in get_all_wells():
-                            	delete_well (name=w.name)
-                            end_wf_item (index = 127)
-
-
-                        if False:
-                            begin_wf_item (index = 128)
-                            wells_import_welltrack_format (wells=find_object (name="Wells",
-                                  type="gt_wells_entity"),
-                                  trajectories=find_object (name="Trajectories",
-                                  type="Trajectories"),
-                                  do_remove_existing_wells=False,
-                                  well_searcher="name",
-                                  splitter=True,
-                                  file_names=["Example/02_oil/project_directory/current/welltrac.INC"],
-                                  splitter2=True,
-                                  use_oem_encoding=False,
-                                  add_zero_point=False,
-                                  invert_z=False,
-                                  use_well_filter=False,
-                                  result_well_filter=find_object (name="Well Filter 1",
-                                  type="WellFilter"),
-                                  file_datum_info=CrsInfo (crs_type="not_specified",
-                                  crs_code=None,
-                                  crs_name="",
-                                  crs_proj_string=None,
-                                  datum_name=None,
-                                  datum_bounds_inited=False,
-                                  datum_bounds_min_x=0,
-                                  datum_bounds_max_x=0,
-                                  datum_bounds_min_y=0,
-                                  datum_bounds_max_y=0,
-                                  datum_is_in_proj4=False),
-                                  xy_units_system="si",
-                                  z_units_system="si",
-                                  use_xy_units=True,
-                                  xy_units="metres",
-                                  use_z_units=True,
-                                  z_units="metres")
-                            end_wf_item (index = 128)
-
-
-                        if False:
-                            begin_wf_item (index = 129, is_custom_code = True, name = "Перфорации")
-                            import pandas as pd
-                            from datetime import datetime
-
-                            with open(r"D:\14. Кейсы\005. IRM\models\Example\02_oil\project_directory\current\well_events.INC", 'r', encoding='utf-8') as file:
-                            		lines = file.readlines()
-                            data = []
-                            for line in lines[1:]:
-                            	parts = line.strip().split('\t')
-                            	if len(parts) == 6:
-                            		well, date_str, event, top_depth, bottom_depth, depth_type = parts
-                            		day, month, year = map(int, date_str.split('.'))
-                            		if ':' in well:
-                            			well_name, well_number = well.split(':')
-                            			well_number = int(well_number)
-                            		else:
-                            			well_name = well
-                            			well_number = 0
-                            	data.append([well_name, well_number, event, top_depth, bottom_depth, depth_type, day, month, year])
-                            df = pd.DataFrame(data, columns=['Скважина', 'Номер ствола', 'Событие', 'Кровля', 'Подошва', 'Глубина', 'День', 'Месяц', 'Год'])
-
-                            print(df)
-
-                            T = get_all_wells_structure_tables ()[0]
-                            for well_name in df['Скважина'].unique():
-                            	well_records = df[df['Скважина'] == well_name]
-                            	for index, row in well_records.iterrows():
-                            		print(f"perforation well {well_name}:{row['Номер ствола']} c {row['Кровля']} м. до {row['Подошва']} м. по MD")
-                            		date_ = datetime(row['Год'], row['Месяц'], row['День'])
-                            		w=get_well_by_name(name=well_name)
-                            		new_record = T.add_record (well=w, branch_num=row['Номер ствола'], date=date_)
-                            		new_record.set_value (type='event', value='Perforation')
-                            		new_record.set_value (type='top_depth', value=float(row['Кровля']))
-                            		new_record.set_value (type='bottom_depth', value=float(row['Подошва']))
-                            		new_record.set_value (type='skin', value=0)
-                            		new_record.set_value (type='multiplier', value=1)
-                            		new_record.set_value (type='depth_type', value='MD')
-
-                            end_wf_item (index = 129)
+                    if False:
+                        begin_wf_item (index = 129, name = "Работа с скважинами")
+                        workflow_folder ()
+                        if True:
+                            pass
 
 
 
-                    end_wf_item (index = 126)
+                            if False:
+                                begin_wf_item (index = 130, is_custom_code = True, name = "Удалить")
+                                print(get_all_wells())
+                                for w in get_all_wells():
+                                	delete_well (name=w.name)
+                                end_wf_item (index = 130)
+
+
+                            if False:
+                                begin_wf_item (index = 131)
+                                wells_import_welltrack_format (wells=find_object (name="Wells",
+                                      type="gt_wells_entity"),
+                                      trajectories=find_object (name="Trajectories",
+                                      type="Trajectories"),
+                                      do_remove_existing_wells=False,
+                                      well_searcher="name",
+                                      splitter=True,
+                                      file_names=["Example/02_oil/project_directory/current/welltrac.INC"],
+                                      splitter2=True,
+                                      use_oem_encoding=False,
+                                      add_zero_point=False,
+                                      invert_z=False,
+                                      use_well_filter=False,
+                                      result_well_filter=find_object (name="Well Filter 1",
+                                      type="WellFilter"),
+                                      file_datum_info=CrsInfo (crs_type="not_specified",
+                                      crs_code=None,
+                                      crs_name="",
+                                      crs_proj_string=None,
+                                      datum_name=None,
+                                      datum_bounds_inited=False,
+                                      datum_bounds_min_x=0,
+                                      datum_bounds_max_x=0,
+                                      datum_bounds_min_y=0,
+                                      datum_bounds_max_y=0,
+                                      datum_is_in_proj4=False),
+                                      xy_units_system="si",
+                                      z_units_system="si",
+                                      use_xy_units=True,
+                                      xy_units="metres",
+                                      use_z_units=True,
+                                      z_units="metres")
+                                end_wf_item (index = 131)
+
+
+                            if False:
+                                begin_wf_item (index = 132, is_custom_code = True, name = "Перфорации")
+                                import pandas as pd
+                                from datetime import datetime
+
+                                with open(r"D:\14. Кейсы\005. IRM\models\Example\02_oil\project_directory\current\well_events.INC", 'r', encoding='utf-8') as file:
+                                		lines = file.readlines()
+                                data = []
+                                for line in lines[1:]:
+                                	parts = line.strip().split('\t')
+                                	if len(parts) == 6:
+                                		well, date_str, event, top_depth, bottom_depth, depth_type = parts
+                                		day, month, year = map(int, date_str.split('.'))
+                                		if ':' in well:
+                                			well_name, well_number = well.split(':')
+                                			well_number = int(well_number)
+                                		else:
+                                			well_name = well
+                                			well_number = 0
+                                	data.append([well_name, well_number, event, top_depth, bottom_depth, depth_type, day, month, year])
+                                df = pd.DataFrame(data, columns=['Скважина', 'Номер ствола', 'Событие', 'Кровля', 'Подошва', 'Глубина', 'День', 'Месяц', 'Год'])
+
+                                print(df)
+
+                                T = get_all_wells_structure_tables ()[0]
+                                for well_name in df['Скважина'].unique():
+                                	well_records = df[df['Скважина'] == well_name]
+                                	for index, row in well_records.iterrows():
+                                		print(f"perforation well {well_name}:{row['Номер ствола']} c {row['Кровля']} м. до {row['Подошва']} м. по MD")
+                                		date_ = datetime(row['Год'], row['Месяц'], row['День'])
+                                		w=get_well_by_name(name=well_name)
+                                		new_record = T.add_record (well=w, branch_num=row['Номер ствола'], date=date_)
+                                		new_record.set_value (type='event', value='Perforation')
+                                		new_record.set_value (type='top_depth', value=float(row['Кровля']))
+                                		new_record.set_value (type='bottom_depth', value=float(row['Подошва']))
+                                		new_record.set_value (type='skin', value=0)
+                                		new_record.set_value (type='multiplier', value=1)
+                                		new_record.set_value (type='depth_type', value='MD')
+
+                                end_wf_item (index = 132)
 
 
 
-            end_wf_item (index = 122)
-
-
-        if False:
-            begin_wf_item (index = 132, name = "Опция \"Газ\"")
-            workflow_folder ()
-            if True:
-                pass
+                        end_wf_item (index = 129)
 
 
 
-                if False:
-                    begin_wf_item (index = 133, is_custom_code = True, name = "Определение переменных моделей")
-                    manager_gas = Manager(
-                    	variable_file = r"D:\Orher\gas\variable.json", 
-                    	config_varibale = r"D:\14. Кейсы\005. IRM\models\Example\01_gas\variable_directory\conditions_variable.json", 
-                    	default_variables = r"D:\14. Кейсы\005. IRM\models\Example\01_gas\variable_directory\by_default_variables.json"
-                    	)
-
-                    # Вывод дополнительной информации о характеристик переменных
-                    print(manager_gas.help_field('description'))
-                    #		Доступно 
-                    #		"type", Тип данных
-                    #		"measure", Едицина измерения
-                    #		"description", Описание переменной
-                    #		"status_empty", Статус переменной, если переменная моежт быть пустой - True,иначе False
-                    #		"status_variable", Статус переменной, для чего используется переменная
-                    #		"limit" Верхние и нижние границы диапазаонов вариации переменных
-
-                    '''
-
-                    			Описание принимаемых атрибутов класса Manager
-
-                    variable_file = Заполняемый шаблон значений переменных. Который будет использован в качестве переменной для запуска main.exe
-                    config_varibale = Json файл с описанием переменных, типы, ограничения (менять не рекомендуется, т.к. main.exe ссылается своему config_varibale)
-                    default_variables = Пустой шаблон для сброса изменений значений переменных установленных в variable_file
-
-                    '''
+                end_wf_item (index = 125)
 
 
-                    def get(key:str) -> None:
-                    	'''
-                    	Вывод сообщения 
-                    	'''
-                    	print(f"Установленное значение {key} = {manager_gas.get_variable(key)}")
+            if False:
+                begin_wf_item (index = 135, name = "Опция \"Газ\"")
+                workflow_folder ()
+                if True:
+                    pass
 
 
-                    '''
 
-                    			Обязательные параметры расчета
+                    if False:
+                        begin_wf_item (index = 136, is_custom_code = True, name = "Определение переменных моделей")
+                        manager_gas = Manager(
+                        	variable_file = r"D:\Orher\gas\variable.json", 
+                        	config_varibale = r"D:\14. Кейсы\005. IRM\models\Example\01_gas\variable_directory\conditions_variable.json", 
+                        	default_variables = r"D:\14. Кейсы\005. IRM\models\Example\01_gas\variable_directory\by_default_variables.json"
+                        	)
 
-                    '''
+                        # Вывод дополнительной информации о характеристик переменных
+                        print(manager_gas.help_field('description'))
+                        #		Доступно 
+                        #		"type", Тип данных
+                        #		"measure", Едицина измерения
+                        #		"description", Описание переменной
+                        #		"status_empty", Статус переменной, если переменная моежт быть пустой - True,иначе False
+                        #		"status_variable", Статус переменной, для чего используется переменная
+                        #		"limit" Верхние и нижние границы диапазаонов вариации переменных
 
-                    # Устанавливаем название расчета
-                    manager_gas.set_variable('name', 'GAS')
-                    get('name')
+                        '''
 
-                    # Устанавливаем начало расчета (согласно начальному времени расчета в проекте Дизайнера моеделей)
-                    manager_gas.set_variable('start', datetime(year=2024, month=1, day=1))
-                    get('start')
+                        			Описание принимаемых атрибутов класса Manager
 
-                    # Устанавливаем время расчета (согласно времени расчета в проекте Дизайнера моеделей, в годах)
-                    manager_gas.set_variable('duration', 20)
-                    get('duration')
+                        variable_file = Заполняемый шаблон значений переменных. Который будет использован в качестве переменной для запуска main.exe
+                        config_varibale = Json файл с описанием переменных, типы, ограничения (менять не рекомендуется, т.к. main.exe ссылается своему config_varibale)
+                        default_variables = Пустой шаблон для сброса изменений значений переменных установленных в variable_file
 
-                    # Устанавливаем абсолютный путь к выгруженным кубам свойств. В данном случае к директории с PERMX, GIPM
-                    manager_gas.set_variable('property_directory', r"D:\14. Кейсы\005. IRM\models\Example\01_gas\property_directory")
-                    get('property_directory')
-
-                    # Устанавливаем абсолютный путь к выгрузке координатной сетки
-                    manager_gas.set_variable('coord_directory', r"D:\14. Кейсы\005. IRM\models\Example\01_gas\coord_directory")
-                    get('coord_directory')
-
-                    # Устанавливаем абсолютный путь для сохранения результатов расчета скрипта
-                    manager_gas.set_variable('project_directory', r"D:\14. Кейсы\005. IRM\models\Example\01_gas\project_directory")
-                    get('project_directory')
-
-                    '''
-
-                    			Необязательные параметры
-
-                    '''
-
-                    # Устанавливаем абсолютный путь к выгруженныму кубу регионов. В данном случае к директории с EQLNUM
-                    manager_gas.set_variable('regions_directory', r"D:\14. Кейсы\005. IRM\models\Example\01_gas\regions_directory")
-                    get('regions_directory')
-
-                    # Устанавливаем абсолютный путь к выгруженныму кубу фильтра. В данном случае к директории, которая пустая (опция расчета с фильтром не будет использована)
-                    manager_gas.set_variable('mask_directory', r"D:\14. Кейсы\005. IRM\models\Example\01_gas\mask_directory")
-                    get('mask_directory')
-
-                    # Устанавливаем путь к растровой карте поверхности.
-                    # ВАЖНО!: Путь не должен содержать русскоязычные символы (из-за особенностей работы cv2)
-                    manager_gas.set_variable('map_directory', r"D:\maps")
-                    get('map_directory')
-
-                    # Дневная задержка по мобилизации БУ от начала времени расчета
-                    manager_gas.set_variable('relative_mob_start', 0)
-                    get('relative_mob_start')
-
-                    # Дневная задержка по запуску кейса от начала времени расчета
-                    # Допускаем, что от начала расчета и с момента готовности газовой инфраструктуры должно пройти 2 года
-                    time_pause = int(2*365)
-                    manager_gas.set_variable('relative_pmr_start', time_pause)
-                    get('relative_pmr_start')
-
-                    '''
-
-                    			Параметры оптимизации 
-
-                    '''
-
-                    # Устанавливаем параметр фильтрации для нормализованного куба PERMX x GIPM (Считается внутри main.exe)
-                    manager_gas.set_variable('selection', int(SELECTION_GAS))
-                    get('selection')
-
-                    # Устанавливаем ограничение на максимальное количество КП 
-                    manager_gas.set_variable('wp_max', int(WP_MAX_GAS))
-                    get('wp_max')
-
-                    # Устанавливаем ограничение на максимальное количество стволов 
-                    # wt_max - 1: заканчивание ГС, wt_max - 2: заканчивание двухстволка, wt_max = 3.заканчивание МЗС
-                    manager_gas.set_variable('wt_max', int(WT_MAX_GAS))
-                    get('wt_max')
-
-                    # Устанавливаем количество БУ под мобилиацию
-                    manager_gas.set_variable('mobil_dr', int(MOBIL_BU_GAS))
-                    get('mobil_dr')
-
-                    # Вывод всех переменных
-                    print(manager_gas.info_variable)
-
-                    # Вывод всех характеристик переменных
-                    print(manager_gas.info_variable_settings)
-                    end_wf_item (index = 133)
+                        '''
 
 
-                begin_wf_item (index = 134, name = "Пояснения ")
-                comment_text ("""
+                        def get(key:str) -> None:
+                        	'''
+                        	Вывод сообщения 
+                        	'''
+                        	print(f"Установленное значение {key} = {manager_gas.get_variable(key)}")
+
+
+                        '''
+
+                        			Обязательные параметры расчета
+
+                        '''
+
+                        # Устанавливаем название расчета
+                        manager_gas.set_variable('name', 'GAS')
+                        get('name')
+
+                        # Устанавливаем начало расчета (согласно начальному времени расчета в проекте Дизайнера моеделей)
+                        manager_gas.set_variable('start', datetime(year=2024, month=1, day=1))
+                        get('start')
+
+                        # Устанавливаем время расчета (согласно времени расчета в проекте Дизайнера моеделей, в годах)
+                        manager_gas.set_variable('duration', 20)
+                        get('duration')
+
+                        # Устанавливаем абсолютный путь к выгруженным кубам свойств. В данном случае к директории с PERMX, GIPM
+                        manager_gas.set_variable('property_directory', r"D:\14. Кейсы\005. IRM\models\Example\01_gas\property_directory")
+                        get('property_directory')
+
+                        # Устанавливаем абсолютный путь к выгрузке координатной сетки
+                        manager_gas.set_variable('coord_directory', r"D:\14. Кейсы\005. IRM\models\Example\01_gas\coord_directory")
+                        get('coord_directory')
+
+                        # Устанавливаем абсолютный путь для сохранения результатов расчета скрипта
+                        manager_gas.set_variable('project_directory', r"D:\14. Кейсы\005. IRM\models\Example\01_gas\project_directory")
+                        get('project_directory')
+
+                        '''
+
+                        			Необязательные параметры
+
+                        '''
+
+                        # Устанавливаем абсолютный путь к выгруженныму кубу регионов. В данном случае к директории с EQLNUM
+                        manager_gas.set_variable('regions_directory', r"D:\14. Кейсы\005. IRM\models\Example\01_gas\regions_directory")
+                        get('regions_directory')
+
+                        # Устанавливаем абсолютный путь к выгруженныму кубу фильтра. В данном случае к директории, которая пустая (опция расчета с фильтром не будет использована)
+                        manager_gas.set_variable('mask_directory', r"D:\14. Кейсы\005. IRM\models\Example\01_gas\mask_directory")
+                        get('mask_directory')
+
+                        # Устанавливаем путь к растровой карте поверхности.
+                        # ВАЖНО!: Путь не должен содержать русскоязычные символы (из-за особенностей работы cv2)
+                        manager_gas.set_variable('map_directory', r"D:\maps")
+                        get('map_directory')
+
+                        # Дневная задержка по мобилизации БУ от начала времени расчета
+                        manager_gas.set_variable('relative_mob_start', 0)
+                        get('relative_mob_start')
+
+                        # Дневная задержка по запуску кейса от начала времени расчета
+                        # Допускаем, что от начала расчета и с момента готовности газовой инфраструктуры должно пройти 2 года
+                        time_pause = int(2*365)
+                        manager_gas.set_variable('relative_pmr_start', time_pause)
+                        get('relative_pmr_start')
+
+                        '''
+
+                        			Параметры оптимизации 
+
+                        '''
+
+                        # Устанавливаем параметр фильтрации для нормализованного куба PERMX x GIPM (Считается внутри main.exe)
+                        manager_gas.set_variable('selection', int(SELECTION_GAS))
+                        get('selection')
+
+                        # Устанавливаем ограничение на максимальное количество КП 
+                        manager_gas.set_variable('wp_max', int(WP_MAX_GAS))
+                        get('wp_max')
+
+                        # Устанавливаем ограничение на максимальное количество стволов 
+                        # wt_max - 1: заканчивание ГС, wt_max - 2: заканчивание двухстволка, wt_max = 3.заканчивание МЗС
+                        manager_gas.set_variable('wt_max', int(WT_MAX_GAS))
+                        get('wt_max')
+
+                        # Устанавливаем количество БУ под мобилиацию
+                        manager_gas.set_variable('mobil_dr', int(MOBIL_BU_GAS))
+                        get('mobil_dr')
+
+                        # Вывод всех переменных
+                        print(manager_gas.info_variable)
+
+                        # Вывод всех характеристик переменных
+                        print(manager_gas.info_variable_settings)
+                        end_wf_item (index = 136)
+
+
+                    begin_wf_item (index = 137, name = "Пояснения ")
+                    comment_text ("""
 Путь к variable_file должен:
 1) Совпадать с self.variable_file класса Manager для объекта manager_gas
 2) Не должен содержать русскоязычные символы (из-за особеностей кодировщика)
 """)
-                end_wf_item (index = 134)
+                    end_wf_item (index = 137)
 
 
-                if False:
-                    begin_wf_item (index = 135, name = "Запуск main.exe")
-                    execute_external_program (program="D:/14. Кейсы/005. IRM/res/SmartCase/SmartCase.exe",
-                          arguments="\"D:\\Orher\\gas\\variable.json\"",
-                          use_working_directory=False,
-                          working_directory="")
-                    end_wf_item (index = 135)
+                    if False:
+                        begin_wf_item (index = 138, name = "Запуск main.exe")
+                        execute_external_program (program="D:/14. Кейсы/005. IRM/res/SmartCase/SmartCase.exe",
+                              arguments="\"D:\\Orher\\gas\\variable.json\"",
+                              use_working_directory=False,
+                              working_directory="")
+                        end_wf_item (index = 138)
 
 
-                if False:
-                    begin_wf_item (index = 136, name = "Работа с скважинами")
-                    workflow_folder ()
-                    if True:
-                        pass
+                    if False:
+                        begin_wf_item (index = 139, name = "Работа с скважинами")
+                        workflow_folder ()
+                        if True:
+                            pass
 
 
 
-                        begin_wf_item (index = 137)
-                        comment_text ("""
+                            begin_wf_item (index = 140)
+                            comment_text ("""
 Необходимо снять галочку над командой \"Удалить\", в случае запуска расчета нефтяного и газового кейса одновременно
 """)
-                        end_wf_item (index = 137)
-
-
-                        if False:
-                            begin_wf_item (index = 138, is_custom_code = True, name = "Удалить")
-                            print(get_all_wells())
-                            for w in get_all_wells():
-                            	delete_well (name=w.name)
-                            end_wf_item (index = 138)
-
-
-                        if False:
-                            begin_wf_item (index = 139)
-                            wells_import_welltrack_format (wells=find_object (name="Wells",
-                                  type="gt_wells_entity"),
-                                  trajectories=find_object (name="Trajectories",
-                                  type="Trajectories"),
-                                  do_remove_existing_wells=False,
-                                  well_searcher="name",
-                                  splitter=True,
-                                  file_names=["Example/01_gas/project_directory/current/welltrac.INC"],
-                                  splitter2=True,
-                                  use_oem_encoding=False,
-                                  add_zero_point=False,
-                                  invert_z=False,
-                                  use_well_filter=False,
-                                  result_well_filter=find_object (name="Well Filter 1",
-                                  type="WellFilter"),
-                                  file_datum_info=CrsInfo (crs_type="not_specified",
-                                  crs_code=None,
-                                  crs_name="",
-                                  crs_proj_string=None,
-                                  datum_name=None,
-                                  datum_bounds_inited=False,
-                                  datum_bounds_min_x=0,
-                                  datum_bounds_max_x=0,
-                                  datum_bounds_min_y=0,
-                                  datum_bounds_max_y=0,
-                                  datum_is_in_proj4=False),
-                                  xy_units_system="si",
-                                  z_units_system="si",
-                                  use_xy_units=True,
-                                  xy_units="metres",
-                                  use_z_units=True,
-                                  z_units="metres")
-                            end_wf_item (index = 139)
-
-
-                        if False:
-                            begin_wf_item (index = 140, is_custom_code = True, name = "Перфорации")
-                            import pandas as pd
-                            from datetime import datetime
-
-                            with open(r"D:\14. Кейсы\005. IRM\models\Example\01_gas\project_directory\current\well_events.INC", 'r', encoding='utf-8') as file:
-                            		lines = file.readlines()
-                            data = []
-                            for line in lines[1:]:
-                            	parts = line.strip().split('\t')
-                            	if len(parts) == 6:
-                            		well, date_str, event, top_depth, bottom_depth, depth_type = parts
-                            		day, month, year = map(int, date_str.split('.'))
-                            		if ':' in well:
-                            			well_name, well_number = well.split(':')
-                            			well_number = int(well_number)
-                            		else:
-                            			well_name = well
-                            			well_number = 0
-                            	data.append([well_name, well_number, event, top_depth, bottom_depth, depth_type, day, month, year])
-                            df = pd.DataFrame(data, columns=['Скважина', 'Номер ствола', 'Событие', 'Кровля', 'Подошва', 'Глубина', 'День', 'Месяц', 'Год'])
-
-                            print(df)
-
-                            T = get_all_wells_structure_tables ()[0]
-                            for well_name in df['Скважина'].unique():
-                            	well_records = df[df['Скважина'] == well_name]
-                            	for index, row in well_records.iterrows():
-                            		print(f"perforation well {well_name}:{row['Номер ствола']} c {row['Кровля']} м. до {row['Подошва']} м. по MD")
-                            		date_ = datetime(row['Год'], row['Месяц'], row['День'])
-                            		w=get_well_by_name(name=well_name)
-                            		new_record = T.add_record (well=w, branch_num=row['Номер ствола'], date=date_)
-                            		new_record.set_value (type='event', value='Perforation')
-                            		new_record.set_value (type='top_depth', value=float(row['Кровля']))
-                            		new_record.set_value (type='bottom_depth', value=float(row['Подошва']))
-                            		new_record.set_value (type='skin', value=0)
-                            		new_record.set_value (type='multiplier', value=1)
-                            		new_record.set_value (type='depth_type', value='MD')
-
                             end_wf_item (index = 140)
 
 
-
-                    end_wf_item (index = 136)
-
-
-
-            end_wf_item (index = 132)
-
-
-        if False:
-            begin_wf_item (index = 143)
-            schedule_rule_well_structure (schedule_strategy=find_object (name="Case",
-                  type="gt_schedule_rules_data"),
-                  use_rule_name=True,
-                  rule_name="Ввод конструкции скважин",
-                  object_set_type="all_objects",
-                  object_set_name="Все скважины",
-                  params_table=[{"table_name" : find_object (name="Конструкция скважин",
-                  type="gt_wells_events_data")}])
-            end_wf_item (index = 143)
+                            if False:
+                                begin_wf_item (index = 141, is_custom_code = True, name = "Удалить")
+                                print(get_all_wells())
+                                for w in get_all_wells():
+                                	delete_well (name=w.name)
+                                end_wf_item (index = 141)
 
 
-        if False:
-            begin_wf_item (index = 144)
-            schedule_import (reload_all=True,
-                  file_name="Example/02_oil/project_directory/current/schedule.sch",
-                  strategy=find_object (name="Case",
-                  type="gt_schedule_rules_data"),
-                  starting_date=datetime (year=2024,
-                  month=1,
-                  day=1,
-                  hour=0,
-                  minute=0,
-                  second=0),
-                  select_import_mode="Convert Model",
-                  result_well_events=find_object (name="Конструкция скважин",
-                  type="gt_wells_events_data"),
-                  additional_options=True,
-                  apply_welspecs_later=False)
-            end_wf_item (index = 144)
+                            if False:
+                                begin_wf_item (index = 142)
+                                wells_import_welltrack_format (wells=find_object (name="Wells",
+                                      type="gt_wells_entity"),
+                                      trajectories=find_object (name="Trajectories",
+                                      type="Trajectories"),
+                                      do_remove_existing_wells=False,
+                                      well_searcher="name",
+                                      splitter=True,
+                                      file_names=["Example/01_gas/project_directory/current/welltrac.INC"],
+                                      splitter2=True,
+                                      use_oem_encoding=False,
+                                      add_zero_point=False,
+                                      invert_z=False,
+                                      use_well_filter=False,
+                                      result_well_filter=find_object (name="Well Filter 1",
+                                      type="WellFilter"),
+                                      file_datum_info=CrsInfo (crs_type="not_specified",
+                                      crs_code=None,
+                                      crs_name="",
+                                      crs_proj_string=None,
+                                      datum_name=None,
+                                      datum_bounds_inited=False,
+                                      datum_bounds_min_x=0,
+                                      datum_bounds_max_x=0,
+                                      datum_bounds_min_y=0,
+                                      datum_bounds_max_y=0,
+                                      datum_is_in_proj4=False),
+                                      xy_units_system="si",
+                                      z_units_system="si",
+                                      use_xy_units=True,
+                                      xy_units="metres",
+                                      use_z_units=True,
+                                      z_units="metres")
+                                end_wf_item (index = 142)
 
 
-        if False:
-            begin_wf_item (index = 145)
-            schedule_import (reload_all=False,
-                  file_name="Example/01_gas/project_directory/current/schedule.sch",
-                  strategy=find_object (name="Case",
-                  type="gt_schedule_rules_data"),
-                  starting_date=datetime (year=2024,
-                  month=1,
-                  day=1,
-                  hour=0,
-                  minute=0,
-                  second=0),
-                  select_import_mode="Convert Model",
-                  result_well_events=find_object (name="Конструкция скважин",
-                  type="gt_wells_events_data"),
-                  additional_options=True,
-                  apply_welspecs_later=False)
-            end_wf_item (index = 145)
+                            if False:
+                                begin_wf_item (index = 143, is_custom_code = True, name = "Перфорации")
+                                import pandas as pd
+                                from datetime import datetime
+
+                                with open(r"D:\14. Кейсы\005. IRM\models\Example\01_gas\project_directory\current\well_events.INC", 'r', encoding='utf-8') as file:
+                                		lines = file.readlines()
+                                data = []
+                                for line in lines[1:]:
+                                	parts = line.strip().split('\t')
+                                	if len(parts) == 6:
+                                		well, date_str, event, top_depth, bottom_depth, depth_type = parts
+                                		day, month, year = map(int, date_str.split('.'))
+                                		if ':' in well:
+                                			well_name, well_number = well.split(':')
+                                			well_number = int(well_number)
+                                		else:
+                                			well_name = well
+                                			well_number = 0
+                                	data.append([well_name, well_number, event, top_depth, bottom_depth, depth_type, day, month, year])
+                                df = pd.DataFrame(data, columns=['Скважина', 'Номер ствола', 'Событие', 'Кровля', 'Подошва', 'Глубина', 'День', 'Месяц', 'Год'])
+
+                                print(df)
+
+                                T = get_all_wells_structure_tables ()[0]
+                                for well_name in df['Скважина'].unique():
+                                	well_records = df[df['Скважина'] == well_name]
+                                	for index, row in well_records.iterrows():
+                                		print(f"perforation well {well_name}:{row['Номер ствола']} c {row['Кровля']} м. до {row['Подошва']} м. по MD")
+                                		date_ = datetime(row['Год'], row['Месяц'], row['День'])
+                                		w=get_well_by_name(name=well_name)
+                                		new_record = T.add_record (well=w, branch_num=row['Номер ствола'], date=date_)
+                                		new_record.set_value (type='event', value='Perforation')
+                                		new_record.set_value (type='top_depth', value=float(row['Кровля']))
+                                		new_record.set_value (type='bottom_depth', value=float(row['Подошва']))
+                                		new_record.set_value (type='skin', value=0)
+                                		new_record.set_value (type='multiplier', value=1)
+                                		new_record.set_value (type='depth_type', value='MD')
+
+                                end_wf_item (index = 143)
 
 
-        if False:
-            begin_wf_item (index = 146, name = "Управление скважинами")
-            schedule_rule_add_apply_script (schedule_strategy=find_object (name="Case",
-                  type="gt_schedule_rules_data"),
-                  date_time=datetime (year=2024,
-                  month=1,
-                  day=1,
-                  hour=0,
-                  minute=0,
-                  second=0),
-                  use_rule_name=True,
-                  rule_name="Управление нефтяными скважинами",
-                  file_name="control",
-                  function_name="control_wells",
-                  variables_table=[{"variable" : "depression_oil", "value" : resolve_variables_in_string (string_with_variables="@DEP_OIL@",
-                  variables=variables)}, {"variable" : "limit_oil_liq_well", "value" : "500"}, {"variable" : "depression_gas", "value" : resolve_variables_in_string (string_with_variables="@DEP_GAS@",
-                  variables=variables)}, {"variable" : "limit_gas_gas_well", "value" : "500000"}],
-                  script_text="	for group in get_all_groups ( ):\n		if group.name == \'OIL\':\n			for w in group.all_wells:\n				# Получаем все скважины на нефть\n				if w.is_stopped ( ):\n					continue\n				BHP_ = wbp9[w] - depression_oil\n				print(f\'Настройка скважины {w.name} Зайбоное давление - {BHP_}\')\n				if BHP_ < 40:\n					print(f\'Отключаем скважину {w.name} Зайбоное давление - {BHP_} ниже 40 бар\')\n					set_well_status (w.name, status = \'stop\')\n					continue\n				\n				add_keyword(\n					\"\"\"\n					WCONPROD\n					\"\"\"+w.name+\"\"\" OPEN LRAT 3* \"\"\"+ str(limit_oil_liq_well) +\"\"\" * \"\"\"+ str(BHP_) +\"\"\" /\n					/\n					\"\"\"\n					)\n				print(f\'Задаем ограничения на скважину {w.name}\')\n				add_keyword(\n					\"\"\"\n					WECON\n					\"\"\"+w.name+\"\"\" 10 * 0.98 8000 * CON+ /\n					/\n					\"\"\"\n					)\n		elif group.name == \'GAS\':\n			for w in group.all_wells:\n				# Получаем все скважины на нефть\n				if w.is_stopped ( ):\n					continue\n				BHP_ = wbp9[w] - depression_gas\n				print(f\'Настройка скважины {w.name} Зайбоное давление - {BHP_}\')\n				if BHP_ < 40:\n					print(f\'Отключаем скважину {w.name} Зайбоное давление - {BHP_} ниже 40 бар\')\n					set_well_status (w.name, status = \'stop\')\n					continue\n				\n				add_keyword(\n					\"\"\"\n					WCONPROD\n					\"\"\"+w.name+\"\"\" OPEN GRAT 2* \"\"\"+ str(limit_gas_gas_well) +\"\"\" 2* \"\"\"+ str(BHP_) +\"\"\" /\n					/\n					\"\"\"\n					)\n				print(f\'Задаем ограничения на скважину {w.name}\')\n				add_keyword(\n					\"\"\"\n					WECON\n					\"\"\"+w.name+\"\"\" * 10000 2* 0.005 CON+ /\n					/\n					\"\"\"\n					)\n		\n")
-            end_wf_item (index = 146)
+
+                        end_wf_item (index = 139)
 
 
 
-    end_wf_item (index = 119)
+                end_wf_item (index = 135)
+
+
+            if False:
+                begin_wf_item (index = 146)
+                schedule_rule_well_structure (schedule_strategy=find_object (name="Case",
+                      type="gt_schedule_rules_data"),
+                      use_rule_name=True,
+                      rule_name="Ввод конструкции скважин",
+                      object_set_type="all_objects",
+                      object_set_name="Все скважины",
+                      params_table=[{"table_name" : find_object (name="Конструкция скважин",
+                      type="gt_wells_events_data")}])
+                end_wf_item (index = 146)
+
+
+            if False:
+                begin_wf_item (index = 147)
+                schedule_import (reload_all=True,
+                      file_name="Example/02_oil/project_directory/current/schedule.sch",
+                      strategy=find_object (name="Case",
+                      type="gt_schedule_rules_data"),
+                      starting_date=datetime (year=2024,
+                      month=1,
+                      day=1,
+                      hour=0,
+                      minute=0,
+                      second=0),
+                      select_import_mode="Convert Model",
+                      result_well_events=find_object (name="Конструкция скважин",
+                      type="gt_wells_events_data"),
+                      additional_options=True,
+                      apply_welspecs_later=False)
+                end_wf_item (index = 147)
+
+
+            if False:
+                begin_wf_item (index = 148)
+                schedule_import (reload_all=False,
+                      file_name="Example/01_gas/project_directory/current/schedule.sch",
+                      strategy=find_object (name="Case",
+                      type="gt_schedule_rules_data"),
+                      starting_date=datetime (year=2024,
+                      month=1,
+                      day=1,
+                      hour=0,
+                      minute=0,
+                      second=0),
+                      select_import_mode="Convert Model",
+                      result_well_events=find_object (name="Конструкция скважин",
+                      type="gt_wells_events_data"),
+                      additional_options=True,
+                      apply_welspecs_later=False)
+                end_wf_item (index = 148)
+
+
+            if False:
+                begin_wf_item (index = 149, name = "Управление скважинами")
+                schedule_rule_add_apply_script (schedule_strategy=find_object (name="Case",
+                      type="gt_schedule_rules_data"),
+                      date_time=datetime (year=2024,
+                      month=1,
+                      day=1,
+                      hour=0,
+                      minute=0,
+                      second=0),
+                      use_rule_name=True,
+                      rule_name="Управление нефтяными скважинами",
+                      file_name="control",
+                      function_name="control_wells",
+                      variables_table=[{"variable" : "depression_oil", "value" : resolve_variables_in_string (string_with_variables="@DEP_OIL@",
+                      variables=variables)}, {"variable" : "limit_oil_liq_well", "value" : "500"}, {"variable" : "depression_gas", "value" : resolve_variables_in_string (string_with_variables="@DEP_GAS@",
+                      variables=variables)}, {"variable" : "limit_gas_gas_well", "value" : "500000"}],
+                      script_text="	for group in get_all_groups ( ):\n		if group.name == \'OIL\':\n			for w in group.all_wells:\n				# Получаем все скважины на нефть\n				if w.is_stopped ( ):\n					continue\n				BHP_ = wbp9[w] - depression_oil\n				print(f\'Настройка скважины {w.name} Зайбоное давление - {BHP_}\')\n				if BHP_ < 40:\n					print(f\'Отключаем скважину {w.name} Зайбоное давление - {BHP_} ниже 40 бар\')\n					set_well_status (w.name, status = \'stop\')\n					continue\n				\n				add_keyword(\n					\"\"\"\n					WCONPROD\n					\"\"\"+w.name+\"\"\" OPEN LRAT 3* \"\"\"+ str(limit_oil_liq_well) +\"\"\" * \"\"\"+ str(BHP_) +\"\"\" /\n					/\n					\"\"\"\n					)\n				print(f\'Задаем ограничения на скважину {w.name}\')\n				add_keyword(\n					\"\"\"\n					WECON\n					\"\"\"+w.name+\"\"\" 10 * 0.98 8000 * CON+ /\n					/\n					\"\"\"\n					)\n		elif group.name == \'GAS\':\n			for w in group.all_wells:\n				# Получаем все скважины на нефть\n				if w.is_stopped ( ):\n					continue\n				BHP_ = wbp9[w] - depression_gas\n				print(f\'Настройка скважины {w.name} Зайбоное давление - {BHP_}\')\n				if BHP_ < 40:\n					print(f\'Отключаем скважину {w.name} Зайбоное давление - {BHP_} ниже 40 бар\')\n					set_well_status (w.name, status = \'stop\')\n					continue\n				\n				add_keyword(\n					\"\"\"\n					WCONPROD\n					\"\"\"+w.name+\"\"\" OPEN GRAT 2* \"\"\"+ str(limit_gas_gas_well) +\"\"\" 2* \"\"\"+ str(BHP_) +\"\"\" /\n					/\n					\"\"\"\n					)\n				print(f\'Задаем ограничения на скважину {w.name}\')\n				add_keyword(\n					\"\"\"\n					WECON\n					\"\"\"+w.name+\"\"\" * 10000 2* 0.005 CON+ /\n					/\n					\"\"\"\n					)\n		\n")
+                end_wf_item (index = 149)
+
+
+
+        end_wf_item (index = 122)
 
 
