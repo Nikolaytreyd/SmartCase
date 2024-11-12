@@ -1,0 +1,684 @@
+{
+  "property_directory": {
+    "type": "str",
+    "measure": "text",
+    "description": "Путь к папке непрерывных кубов свойств модели",
+    "status_empty": true,
+    "status_variable": "directory",
+    "limit": {
+      "min": null,
+      "max": null
+    }
+  },
+  "coord_directory": {
+    "type": "str",
+    "measure": "text",
+    "description": "Путь к папке к записи координат сетки в форме (, 3)",
+    "status_empty": true,
+    "status_variable": "directory",
+    "limit": {
+      "min": null,
+      "max": null
+    }
+  },
+  "project_directory": {
+    "type": "str",
+    "measure": "text",
+    "description": "Путь к папке сохранения результатов расчета",
+    "status_empty": true,
+    "status_variable": "directory",
+    "limit": {
+      "min": null,
+      "max": null
+    }
+  },
+  "regions_directory":{
+    "type": "str",
+    "measure": "text",
+    "description": "Путь к папке дискретного куба свойства регионов или блоков или сегментов",
+    "status_empty": false,
+    "status_variable": "directory",
+    "limit": {
+      "min": null,
+      "max": null
+    }
+  },
+  "mask_directory": {
+    "type": "str",
+    "measure": "text",
+    "description": "Путь к папке дискретного куба свойства регионов или блоков или сегментов",
+    "status_empty": false,
+    "status_variable": "directory",
+    "limit": {
+      "min": null,
+      "max": null
+    }
+  },
+  "map_directory": {
+    "type": "str",
+    "measure": "text",
+    "description": "Путь к растровой карте поверхности рельефа земли",
+    "status_empty": false,
+    "status_variable": "directory",
+    "limit": {
+      "min": null,
+      "max": null
+    }
+  },
+  "name": {
+    "type": "str",
+    "measure": "text",
+    "description": "Название проекта расчетов",
+    "status_empty": true,
+    "status_variable": "name_file",
+    "limit": {
+      "min": null,
+      "max": null
+    }
+  },
+  "duration": {
+    "type": "int",
+    "measure": "years",
+    "description": "Время расчета",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 1,
+      "max": "np.inf"
+    }
+  },
+  "start": {
+    "type": "datetime",
+    "measure": "ГГГГ-ММ-ДД",
+    "description": "Начало расчета на ГДМ",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": "0001-01-01",
+      "max": "9999-12-31"
+    }
+  },
+  "relative_mob_start": {
+    "type": "int",
+    "measure": "days",
+    "description": "Начало мобилизации от даты начала расчета",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": "0",
+      "max": "np.inf"
+    }
+  },
+  "relative_pmr_start": {
+    "type": "int",
+    "measure": "days",
+    "description": "Начало полномасштабной реализации (запуск скважин) от даты начала расчета",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": "0",
+      "max": "np.inf"
+    }
+  },
+  "z_normalize": {
+    "type": "float",
+    "measure": "fractions of units",
+    "description": "Параметр нормализации сетки по вертикали",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0.1,
+      "max": 1
+    }
+  },
+  "rgb_lower": {
+    "type": "list",
+    "measure": "list[list[R, G, B], ... , list[R, G, B]]",
+    "description": "Параметры нижних границ RGB для выделения водных объектов",
+    "status_empty": false,
+    "status_variable": "calculation",
+    "limit": {
+      "min": "List, shape = (n, 3) n = num intervals, ndim = 2, rgb_lower[R, G, B] > rgb_upper[R, G, B]",
+      "max": "num intervals rgb_lower == num intervals rgb_upper"
+    }
+  },
+  "rgb_upper": {
+    "type": "list",
+    "measure": "list[list[R, G, B], ... , list[R, G, B]]",
+    "description": "Параметры верхних границ RGB для выделения водных объектов",
+    "status_empty": false,
+    "status_variable": "calculation",
+    "limit": {
+      "min": "List, shape = (n, 3) n = num intervals, ndim = 2, rgb_lower[R, G, B] > rgb_upper[R, G, B]",
+      "max": "num intervals rgb_lower == num intervals rgb_upper"
+    }
+  },
+  "wp_r": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Зона расчета для КП на предмет наличия водных объектов",
+    "status_empty": false,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "wp_rr": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Зона поиска для КП на предмет наличия водных объектов",
+    "status_empty": false,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "wp_r_chek": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Зона расчета для КП водных объектов",
+    "status_empty": false,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "pl_r": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Зона расчета для внутрипромысловых труб на предмет наличия водных объектов",
+    "status_empty": false,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "pl_rr": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Зона поиска для внутрипромысловых труб на предмет наличия водных объектов",
+    "status_empty": false,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "pl_r_chek": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Зона поиска для внутрипромысловых труб водных объектов",
+    "status_empty": false,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "grid_points": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Количество точек представляемой сетки",
+    "status_empty": true,
+    "status_variable": "optimization",
+    "limit": {
+      "min": 10000,
+      "max": "np.inf"
+      }
+  },
+  "selection": {
+    "type": "float",
+    "measure": "%",
+    "description": "Критерий фильтрации точек по значению их свойств",
+    "status_empty": true,
+    "status_variable": "optimization",
+    "limit": {
+      "min": 0,
+      "max": 100
+    }
+  },
+  "wz_distantce": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Среднее расстояние между скважинами",
+    "status_empty": true,
+    "status_variable": "optimization",
+    "limit": {
+      "min": 500,
+      "max": "np.inf"
+    }
+  },
+  "wz_sector": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Максимальное расстояние от центра до точек зоны",
+    "status_empty": true,
+    "status_variable": "optimization",
+    "limit": {
+      "min": 500,
+      "max": "np.inf"
+    }
+  },
+  "wz_max_iter": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Максимальное количество итераццй по поиску скважинных зон",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 10,
+      "max": 1000
+    }
+  },
+  "wz_const_iter": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Максимальное количество безрезультатных итераций по поиску скважинных зон",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 2,
+      "max": 10
+    }
+  },
+  "wz_max": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Максимальное количество скважинных зон",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 1,
+      "max": "np.inf"
+    }
+  },
+  "wp_distantce": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Среднее расстояние между кустовыми площадками",
+    "status_empty": true,
+    "status_variable": "optimization",
+    "limit": {
+      "min": 500,
+      "max": "np.inf"
+    }
+  },
+  "wp_sector": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Максимальное расстояние от куста до центра скважинных зон",
+    "status_empty": true,
+    "status_variable": "optimization",
+    "limit": {
+      "min": 500,
+      "max": "np.inf"
+    }
+  },
+  "wp_max_iter": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Максимальное количество итераццй по поиску кустов",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 10,
+      "max": 1000
+    }
+  },
+  "wp_const_iter": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Максимальное количество безрезультатных итераций по поиску кустов",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 2,
+      "max": 10
+    }
+  },
+  "wp_max": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Максимальное количество КП",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 1,
+      "max": "np.inf"
+    }
+  },
+  "crit_angle": {
+    "type": "int",
+    "measure": "degrees",
+    "description": "Минимальный угол, угол между точками устье -> T2 -> T3",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 80,
+      "max": 180
+    }
+  },
+  "graph_vertex": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Количество графовых точек",
+    "status_empty": true,
+    "status_variable": "optimization",
+    "limit": {
+      "min": 1,
+      "max": 100
+    }
+  },
+  "trimed_vertex": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Параметр развлетвленности",
+    "status_empty": true,
+    "status_variable": "optimization",
+    "limit": {
+      "min": 0,
+      "max": 100
+    }
+  },
+  "truc_threshold": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Количество точек для кластеризации при выделении проводки",
+    "status_empty": true,
+    "status_variable": "optimization",
+    "limit": {
+      "min": 30,
+      "max": 100
+    }
+  },
+  "well_threshold": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Минимальное количество точек для выделения кластеров",
+    "status_empty": true,
+    "status_variable": "optimization",
+    "limit": {
+      "min": 0,
+      "max": 100
+    }
+  },
+  "wt_max_iter": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Максимальное количество итераций для нахождения траектории",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 1,
+      "max": 1000
+    }
+  },
+  "wt_const_iter": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Максимальное количесвто итераций безрезультатных итераций нахождений траектории",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 2,
+      "max": 10
+    }
+  },
+  "wt_max": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Максимальное количество стволов",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 1,
+      "max": "np.inf"
+    }
+  },
+  "wt_section_lenght": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Длина секции траектории для расчета максимальной допустмой кривизны",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 1,
+      "max": "np.inf"
+    }
+  },
+  "wt_section_angle": {
+    "type": "float",
+    "measure": "degrees",
+    "description": "Максимальный угол отхождения секции по отношению друг к друга для расчета максимальной допустмой кривизны",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0.1,
+      "max": "np.inf"
+    }
+  },  
+  "length_min": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Минимальная длина ствола",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "length_max": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Максимальная длина ствола",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "distance": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Минимальная дистанция от ствола до ствола",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 200,
+      "max": 1000
+    }
+  },
+  "angle_curvature": {
+    "type": "float",
+    "measure": "degrees",
+    "description": "Минимальный угол кривизны траектории",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 110,
+      "max": 160
+    }
+  },
+  "angle_min": {
+    "type": "float",
+    "measure": "degrees",
+    "description": "Минимальный угол срезки стола в ГС",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": 90
+    }
+  },
+  "angle_max": {
+    "type": "float",
+    "measure": "degrees",
+    "description": "Макисмальный угол срезки стола в ГС",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": 90
+    }
+  },
+  "stvol_in_stvol": {
+    "type": "bool",
+    "measure": "bool",
+    "description": "Опция ствол в стволе",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": false,
+      "max": true
+    }
+  },
+  "vertical_withdrawal": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Вертикльный отход",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 200,
+      "max": 1000
+    }
+  },
+  "horizontal_withdrawal": {
+    "type": "float",
+    "measure": "meters",
+    "description": "Горизонтальный отход",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 400,
+      "max": 2000
+    }
+  },
+  "mouth_distance": {
+    "type": "int",
+    "measure": "meters",
+    "description": "Дистанция между устьями скважин на КП",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 4,
+      "max": 50
+    }
+  },
+  "passage": {
+    "type": "float",
+    "measure": "meters per hour",
+    "description": "Средняя проходка бурения",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "mobilization_field": {
+    "type": "int",
+    "measure": "days",
+    "description": "Длительность мобилизации БУ на месторождение",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "moving_pad": {
+    "type": "int",
+    "measure": "days",
+    "description": "Длительность переезда БУ с куста на куст",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "moving_w": {
+    "type": "int",
+    "measure": "days",
+    "description": "Переезд БУ с куста на куст",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "mastering": {
+    "type": "int",
+    "measure": "days",
+    "description": "Промежуток времени с освобождения устья и готовности скважины к вводу к эксплуатации - освоение",
+    "status_empty": true,
+    "status_variable": "calculation",
+    "limit": {
+      "min": 0,
+      "max": "np.inf"
+    }
+  },
+  "mobil_dr": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Количество мобилизируемых буровых станков",
+    "status_empty": true,
+    "status_variable": "optimization",
+    "limit": {
+      "min": 1,
+      "max": "np.inf"
+    }
+  },
+  "result_save": {
+    "type": "bool",
+    "measure": "bool",
+    "description": "Опции расчета сохранения результатов расчета",
+    "status_empty": true,
+    "status_variable": "settings",
+    "limit": {
+      "min": true,
+      "max": false
+    }
+  },
+  "global_random_int": {
+    "type": "int",
+    "measure": "num, pcs.",
+    "description": "Случайное глобальное число",
+    "status_empty": true,
+    "status_variable": "settings",
+    "limit": {
+      "min": 1,
+      "max": "np.inf"
+    }
+  },
+  "loger": {
+    "type": "bool",
+    "measure": "bool",
+    "description": "Разрешение записи действий, вызовов",
+    "status_empty": true,
+    "status_variable": "settings",
+    "limit": {
+      "min": false,
+      "max": true
+    }
+  },
+  "auto_tuning": {
+    "type": "bool",
+    "measure": "bool",
+    "description": "Разрешение автонастройки переменных - автоподтягивание к мин/макс переменным в случае ошибок",
+    "status_empty": true,
+    "status_variable": "settings",
+    "limit": {
+      "min": false,
+      "max": true
+    }
+  }
+}
