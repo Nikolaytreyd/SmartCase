@@ -1,0 +1,1633 @@
+{
+  "version": "auto-py-to-exe-configuration_v1",
+  "pyinstallerOptions": [
+    {
+      "optionDest": "noconfirm",
+      "value": true
+    },
+    {
+      "optionDest": "filenames",
+      "value": "D:/14. \u041a\u0435\u0439\u0441\u044b/005. IRM/app/main.py"
+    },
+    {
+      "optionDest": "onefile",
+      "value": true
+    },
+    {
+      "optionDest": "console",
+      "value": false
+    },
+    {
+      "optionDest": "icon_file",
+      "value": "D:/14. \u041a\u0435\u0439\u0441\u044b/005. IRM/app/ico/goal_business_strategy_icon_262689.ico"
+    },
+    {
+      "optionDest": "name",
+      "value": "SmartCase"
+    },
+    {
+      "optionDest": "upx_dir",
+      "value": "D:/\u0418\u0441\u0445\u043e\u0434\u043d\u0438\u043a\u0438 \u041f\u041e/UPX/upx-4.2.4-win64"
+    },
+    {
+      "optionDest": "clean_build",
+      "value": true
+    },
+    {
+      "optionDest": "strip",
+      "value": false
+    },
+    {
+      "optionDest": "noupx",
+      "value": false
+    },
+    {
+      "optionDest": "disable_windowed_traceback",
+      "value": false
+    },
+    {
+      "optionDest": "manifest",
+      "value": "D:/14. \u041a\u0435\u0439\u0441\u044b/005. IRM/app/MANIFEST.in"
+    },
+    {
+      "optionDest": "uac_admin",
+      "value": false
+    },
+    {
+      "optionDest": "uac_uiaccess",
+      "value": false
+    },
+    {
+      "optionDest": "argv_emulation",
+      "value": false
+    },
+    {
+      "optionDest": "bootloader_ignore_signals",
+      "value": false
+    },
+    {
+      "optionDest": "datas",
+      "value": "D:/14. \u041a\u0435\u0439\u0441\u044b/005. IRM/app/config;config/"
+    },
+    {
+      "optionDest": "datas",
+      "value": "D:/14. \u041a\u0435\u0439\u0441\u044b/005. IRM/app/input;input/"
+    },
+    {
+      "optionDest": "datas",
+      "value": "D:/14. \u041a\u0435\u0439\u0441\u044b/005. IRM/app/ischod;ischod/"
+    },
+    {
+      "optionDest": "datas",
+      "value": "D:/14. \u041a\u0435\u0439\u0441\u044b/005. IRM/app/modules;modules/"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "numpy"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "pandas"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "networkx"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "cv2"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "openpyxl"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "plotly"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "matplotlib"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "sklearn"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "scipy"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "shapely"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "prettytable"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "packaging"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "alabaster"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "setuptools"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "pkg_resources"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "importlib_metadata"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "importlib_resources"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "dateutil"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "pytz"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "platformdirs"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "six"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "pyparsing"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "cycler"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "kiwisolver"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "joblib"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "threadpoolctl"
+    },
+    {
+      "optionDest": "hiddenimports",
+      "value": "wcwidth"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "about-time"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "absl-py"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "accelerate"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "aiodns"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "aiohttp"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "aiosignal"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "albumentations"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "alembic"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "alive-progress"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "altgraph"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "annotated-types"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "ansi2html"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "anyio"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "appdirs"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "apptools"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "apricot-select"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "argon2-cffi"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "argon2-cffi-bindings"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "arrow"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "asttokens"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "astunparse"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "async-timeout"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "asyncio"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "attrs"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "auto-py-to-exe"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "autowoe"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Babel"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "backcall"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "backtrader"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "beautifulsoup4"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "binance"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "binance-chain"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "binance-connector"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "binaryornot"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "bleach"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "bokeh"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "bottle"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "bottle-websocket"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "catboost"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "ccxt"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "certifi"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "cffi"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "chardet"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "charset-normalizer"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "click"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "cmaes"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "cmdstanpy"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "colorama"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "colorlog"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "comm"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "configobj"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "contourpy"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "convertdate"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "cookiecutter"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "coverage"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "cryptography"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "customtkinter"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "darkdetect"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "dash"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "dash-bootstrap-components"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "dash-core-components"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "dash-html-components"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "dash-table"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "dateparser"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "deap"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "debugpy"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "decorator"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "deep"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "defusedxml"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "dill"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "dnspython"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "docker-py"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "dockerpty"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "docopt"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "docutils"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "docxcompose"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "docxtpl"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "easygui"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Eel"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "efficientnet"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "efficientnet-pytorch"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "email-validator"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "envisage"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "ephem"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "et-xmlfile"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "exceptiongroup"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "executing"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Faker"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "fastapi"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "fastjsonschema"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "fig"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "filelock"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Flask"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "flatbuffers"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "flet"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "flet-core"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "flet-runtime"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "fonttools"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "fqdn"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "fredapi"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "frozendict"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "frozenlist"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "fsspec"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "future"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "gast"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "gensim"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "geomdl"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "gevent"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "gevent-websocket"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "google-pasta"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "grapheme"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "graphviz"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "greenlet"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "grpcio"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "h11"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "h5py"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "hdbscan"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "holidays"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "html5lib"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "httpcore"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "httptools"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "httpx"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "huggingface-hub"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "huobi"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "huobi_client"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "idna"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "image-classifiers"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "imageio"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "imagesize"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "imbalanced-learn"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "imblearn"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "immutabledict"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "inflection"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "iniconfig"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "ipykernel"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "ipython"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "ipython-genutils"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "ipywidgets"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "isoduration"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "itsdangerous"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jedi"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Jinja2"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "json2html"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jsonpointer"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jsonschema"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jupyter"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jupyter-console"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jupyter_client"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jupyter_core"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jupyter-events"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jupyter_server"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jupyter_server_terminals"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jupyterlab-pygments"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "jupyterlab-widgets"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "kaleido"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "keras"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Keras-Applications"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "lasio"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "lazy_loader"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "libclang"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "lightautoml"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "lightgbm"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "linkify-it-py"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "llvmlite"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "log-calls"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "LunarCalendar"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "lxml"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Mako"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Markdown"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "markdown-it-py"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "MarkupSafe"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "matplotlib-inline"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "mayavi"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "mdit-py-plugins"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "mdurl"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "MiniSom"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "mistune"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "ml-dtypes"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "more-itertools"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "mpmath"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "multidict"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "multiprocess"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "multitasking"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "namex"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "nbclassic"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "nbclient"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "nbconvert"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "nbformat"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "neonrvm"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "nest-asyncio"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "nltk"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "noise"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "nose"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "notebook"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "notebook_shim"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "numba"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "oauthlib"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "openai"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "opencv-python-headless"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "opt_einsum"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "optree"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "optuna"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "orjson"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "ortools"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pandocfilters"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "panel"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "param"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "parso"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "patsy"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pdoc"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pefile"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pickleshare"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Pillow"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pip"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pipreqs"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pluggy"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "poetry-core"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "polygon-api"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "polygon-api-client"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pomegranate"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "prometheus-client"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "prompt-toolkit"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "prophet"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "protobuf"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "psutil"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pure-eval"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pyaml"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pycares"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pycparser"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pycryptodome"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pydantic"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pydantic_core"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pydantic-extra-types"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pydantic-settings"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pyface"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pyfiglet"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Pygments"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pyinstaller"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pyinstaller-hooks-contrib"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "PyKrige"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "PyMeeus"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pynndescent"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "PyPDF2"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pypng"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pyrsistent"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pyswarms"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pyTelegramBotAPI"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pytest"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "python-binance"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "python-docx"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "python-dotenv"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "python-json-logger"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "python-multipart"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "python-slugify"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pytz-deprecation-shim"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pyviz_comms"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "PyWavelets"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pywin32"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pywin32-ctypes"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pywinpty"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pyxlsb"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "PyYAML"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "pyzmq"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "qrcode"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "qtconsole"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "QtPy"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Quandl"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "qudida"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "rarfile"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "regex"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "repath"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "reportlab"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "requests"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "retrying"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "rfc3339-validator"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "rfc3986-validator"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "rich"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "safetensors"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "SALib"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "scikit-image"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "scikit-optimize"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "seaborn"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "segmentation-models"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Send2Trash"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "sklearn-pandas"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "smart-open"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "sniffio"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "snowballstemmer"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "soupsieve"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Sphinx"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "sphinx-rtd-theme"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "sphinxcontrib-applehelp"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "sphinxcontrib-devhelp"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "sphinxcontrib-htmlhelp"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "sphinxcontrib-jquery"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "sphinxcontrib-jsmath"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "sphinxcontrib-qthelp"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "sphinxcontrib-serializinghtml"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "SQLAlchemy"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "stack-data"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "starlette"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "statsmodels"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "StrEnum"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "sympy"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tabulate"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tenacity"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tensorboard"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tensorboard-data-server"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tensorflow"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tensorflow-intel"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tensorflow-io-gcs-filesystem"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "termcolor"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "terminado"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "text-unidecode"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "texttable"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tifffile"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tinycss2"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tokenizers"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tomli"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "torch"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "torchvision"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tornado"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tqdm"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tradingview-ta"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "traitlets"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "traits"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "traitsui"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "transformers"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "typing_extensions"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tzdata"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "tzlocal"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "uc-micro-py"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "ujson"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "umap-learn"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "uri-template"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "urllib3"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "uvicorn"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "vtk"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "watchdog"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "watchfiles"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "webcolors"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "webencodings"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "websocket-client"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "websockets"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "Werkzeug"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "wheel"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "whichcraft"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "widgetsnbextension"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "wrapt"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "xgboost"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "xlwings"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "xyzservices"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "yarg"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "yarl"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "yellowbrick"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "yfinance"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "zipp"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "zope.event"
+    },
+    {
+      "optionDest": "excludes",
+      "value": "zope.interface"
+    }
+  ],
+  "nonPyinstallerOptions": {
+    "increaseRecursionLimit": true,
+    "manualArguments": ""
+  }
+}
