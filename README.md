@@ -8,10 +8,10 @@
 - plotly для визуализации итогово расчета
   
 ## Дополнительные материалы
-1. **Исходные материалы для сбора гидродинамической модели как в примере**: [Исходные материалы для сбора гидродинамической модели как в примере](https://drive.google.com/drive/folders/1vvX-eW1IcW2JBBghcI1urRggNPUDdSY4?usp=sharing)
-2. **Собранный ".exe" файл для интеграции с проектом tNavigator**: [Собранный ".exe" файл для интеграции с проектом tNavigator](https://drive.google.com/drive/folders/1KHnnp8hk4ky99qRuo7Ar4KVKqgpp0Zog?usp=sharing)
-3. **Материалы результатов расчета по примеру нефтяного кейса**: [Материалы результатов расчета по примеру нефтяного кейса](https://drive.google.com/drive/folders/1Ta-AU0qcTslVdw6nYSHTIVCDJDtoED9e?usp=sharing)
-5. **Материалы результатов расчета по примеру газового кейса**: [Материалы результатов расчета по примеру газового кейса](https://drive.google.com/drive/folders/1tw3A0A2y_fzMviKHpZmaCBPPzuY3rt2w?usp=sharing)
+1. [Исходные материалы для сбора гидродинамической модели как в примере](https://drive.google.com/drive/folders/1vvX-eW1IcW2JBBghcI1urRggNPUDdSY4?usp=sharing)
+2. [Собранный ".exe" файл для интеграции с проектом tNavigator](https://drive.google.com/drive/folders/1KHnnp8hk4ky99qRuo7Ar4KVKqgpp0Zog?usp=sharing)
+3. [Материалы результатов расчета по примеру нефтяного кейса](https://drive.google.com/drive/folders/1Ta-AU0qcTslVdw6nYSHTIVCDJDtoED9e?usp=sharing)
+5. [Материалы результатов расчета по примеру газового кейса](https://drive.google.com/drive/folders/1tw3A0A2y_fzMviKHpZmaCBPPzuY3rt2w?usp=sharing)
 
 ## Пример использования скриптов
 1. Определение кубов OIPM, GIPM, PERMX и сетки (данную работу выполянет full.py - Workflow tNavigator)
