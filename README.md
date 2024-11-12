@@ -169,12 +169,12 @@
    
    Харакетристики обученной ML XGBoost Regressor модели
 
-   ![example2](images/XGB.png)
+   ![example2](images/xgb.png)
 
 
 4. Определение корреляционной матрицы, для генерации новых данных в целях
 
-   ![corr](images/coor.png)
+   ![corr](images/corr.png)
 
    
 5. Формирование пула синтетических расчтетов расчетов
