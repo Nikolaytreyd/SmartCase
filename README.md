@@ -189,9 +189,13 @@
    
 
 8. Расчет устойчивости
+
+   ![example5](images/dist.png)
+
+   
 9. Сравнительный анализ базовых решений и решений сгенерированных  с использованием SmartCase.exe
 
-    ![example5](images/example.png)
+    ![example6](images/example.png)
     
 
 ## Контакты
